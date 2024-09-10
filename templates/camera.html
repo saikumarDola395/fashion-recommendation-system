@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fit ur clothes</title>
+
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        
+        <style>
+            * {
+     padding:0;
+     margin:0;
+}
+
+body {
+background-image:url(https://i.ibb.co/RvnCSQh/IMG-20240312-201815.jpg);
+    background-repeat:no-repeat;
+    background-size:100vw 100vh;
+}
+
+#config {
+    height:100%;
+    width:100vw;
+    background:rgba(0,0,0,0.7);
+}
+
+h3 {
+   color:white;
+   width:100%;
+   font-size:30px;
+   margin-top:50%;
+   padding-top:15px;
+   text-align:center;
+}
+
+#genders , #btype {
+    display:flex;
+    justify-content:center;
+    align-content:space-between;
+}
+
+.gt {
+    height:30vw;
+    width:30vw;
+    margin:20px;
+}
+
+.bt {
+    height: 20vw;
+    width: 20vw;
+    margin:20px;
+}
+
+#btype {
+    display: none;
+}
+
+#b {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    display: none;
+}
+
+#video {
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+}
+canvas {
+    display: none;
+}
+            
+#container {
+    position:absolute;
+    bottom:0;
+    margin:10px;
+    height:30vw;
+    width:calc(100vw - 20px);
+    border-radius:20px;
+    background:rgba(255,255,255,0.8);
+    border:0px solid white;
+    display:flex;
+    overflow-x:auto;
+    padding-right:3px;
+    z-index:10;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  
+  80% { 
+  transform: translateY(-20%);
+  }
+  85% { 
+  transform: translateY(-15%);
+  }
+  90% { 
+  transform: translateY(-10%);
+  }
+  to { transform: translateY(0%); }
+}
+
+.item {
+    height: calc(30vw - 6px);
+    width: calc(30vw - 6px);
+    flex-shrink:0;
+    margin:3px;
+    margin-right:0px;
+    background:white;
+    border-radius:17px;
+    bottom:-100%;
+}
+
+        </style>
+        
+        
+        
+        <script>
+            window.onload = () => {
+
+    var colorname = "Unknown"
+    var clrn = o("clrn")
+    config =  o("config")
+    genders = o("genders")
+    title = o("stitle")
+    gm = o("gm")
+    gf = o("gf")
+    btype = o("btype")
+    m = false
+    
+    gm.onclick = () => {
+        title.innerHTML = "Choose your body type"
+        genders.style.display="none"
+        btype.style.display="flex"
+        m = true
+    }
+
+    gf.onclick = () => {
+        title.innerHTML = "Choose your body type"
+        genders.style.display="none"
+        btype.style.display="flex"
+        m = false
+    }
+
+    l = o("l")
+    xl = o("xl")
+    xxl = o("xxl")
+    b = o("b")
+
+    l.onclick = () => {
+        config.style.display = "none"
+        bl = ""
+        if(m)
+        bl = "https://i.ibb.co/dMPgztC/ml.png"
+        else
+        bl = "https://i.ibb.co/VCcVQwh/fl.png"
+        b.src = bl
+        b.style.display = "block"
+    }
+
+    xl.onclick = () => {
+        config.style.display = "none"
+        if(m)
+        bl = "https://i.ibb.co/jvk2cfL/mxl.png"
+        else
+        bl = "https://i.ibb.co/HB54ZcX/fxl.png"
+        b.src = bl
+        b.style.display = "block"
+    }
+
+    xxl.onclick = () => {
+        config.style.display = "none"
+        if(m)
+        bl = "https://i.ibb.co/p1Z4smH/mxxl.png"
+        else
+        bl = "https://i.ibb.co/zFy24Q1/fxxl.png"
+        b.src = bl
+        b.style.display = "block"
+    }
+    
+
+    function o(s) {
+        return document.getElementById(s)
+    }
+
+    var rs  = {
+  0: ["https://m.media-amazon.com/images/I/61h0+zRTcPL._SX679_.jpg", "https://amzn.eu/d/dLNREx6"],
+  1: ["https://m.media-amazon.com/images/I/51SJBZa4Q8L._SX679_.jpg", "https://amzn.eu/d/iuYPCXX"],
+  2: ["https://m.media-amazon.com/images/I/91qfIhneQSL._SX569_.jpg", "https://amzn.eu/d/31VhgCk"],
+  3: ["https://m.media-amazon.com/images/I/71ujJvq2CzL._SX679_.jpg", "https://amzn.eu/d/9nO17tF"],
+  4: ["https://m.media-amazon.com/images/I/91blYNbUkFL._SY879_.jpg", "https://amzn.eu/d/bK6AEc8"],
+  5: ["https://m.media-amazon.com/images/I/51Ri+3Gxo6L._SY879_.jpg", "https://amzn.eu/d/3b76O7l"],
+  6: ["https://m.media-amazon.com/images/I/81+ap29LFIL._SY879_.jpg", "https://amzn.eu/d/2MkS1WV"],
+  8: ["https://m.media-amazon.com/images/I/51TvT3+lZDL.jpg", "https://amzn.eu/d/4EQKy98"],
+  8: ["https://m.media-amazon.com/images/I/61yATkar4uL._SY741_.jpg", "https://amzn.eu/d/4WRYXSf"],
+  9: ["https://m.media-amazon.com/images/I/71ZGe3YWTVL._SY879_.jpg", "https://amzn.eu/d/8Rcxsu1"],
+};
+
+var bls  = {
+  0: ["https://m.media-amazon.com/images/I/61s3rT63mtL._SX679_.jpg", "https://amzn.eu/d/b7DwOGH"],
+  1: ["https://m.media-amazon.com/images/I/510bAxmzH9L._SX569_.jpg", "https://amzn.eu/d/7YUjHai"],
+  2: ["https://m.media-amazon.com/images/I/51zFNTawmsL._SX679_.jpg", "https://amzn.eu/d/eED7DlK"],
+  3: ["https://m.media-amazon.com/images/I/71zpxIhI7EL._SX679_.jpg", "https://amzn.eu/d/ez8mbQH"],
+  4: ["https://m.media-amazon.com/images/I/41aa2OQ-0YL._SY741_.jpg", "https://amzn.eu/d/1eDiJg9"],
+  5: ["https://m.media-amazon.com/images/I/714ZhKeE-lL._SY879_.jpg", "https://amzn.eu/d/gEb2SMo"],
+  6: ["https://m.media-amazon.com/images/I/71gxzNP0V3L._SY879_.jpg", "https://amzn.eu/d/0PYc9xl"],
+  7: ["https://m.media-amazon.com/images/I/61vrHdwwrZL._SX569_.jpg", "https://amzn.eu/d/8jsTkHX"],
+  8: ["https://m.media-amazon.com/images/I/618AldcT9TL._SY879_.jpg", "https://amzn.eu/d/9xmn4Zg"],
+  9: ["https://m.media-amazon.com/images/I/51D0RRDSG9L._SY879_.jpg", "https://amzn.eu/d/07et9mA"],
+};
+
+var gs = {}
+var bs = {}
+var ys = {}
+var ws = {}
+
+    
+    
+
+var c = document.getElementById("container");
+var imgs = [];
+
+Object.keys(rs).forEach(key => { 
+let img = document.createElement("img"); img.className = "item";
+img.src = rs[key][0];
+img.onclick = () => { window.open(rs[key][1], "_blank"); }
+imgs.push(img); c.appendChild(img); });
+            
+
+    const video = o('video');
+    const canvas = o('canvas');
+    const context = canvas.getContext('2d');
+    const circleRadius = 10; // radius of the circle
+
+    // Request access to the camera
+    navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } })
+    .then((stream) => {
+        video.srcObject = stream;
+    })
+    .catch((err) => {
+        console.error('Error accessing the camera:', err);
+    });
+
+    video.addEventListener('play', () => {
+        const width = video.videoWidth;
+        const height = video.videoHeight;
+
+        canvas.width = width;
+        canvas.height = height;
+
+        setInterval(() => {
+            context.drawImage(video, 0, 0, width, height);
+            const imageData = context.getImageData(0, 0, width, height);
+            const pixelData = imageData.data;
+
+            const centerX = Math.floor(width / 2);
+            const centerY = Math.floor(height / 2);
+            
+            context.beginPath();
+            context.arc(centerX, centerY, circleRadius, 0, 2 * Math.PI);
+            context.strokeStyle = 'red'; // Circle color
+            context.lineWidth = 2;
+            context.stroke();
+            
+            const pixelIndex = (centerY * width + centerX) * 4;
+            const r = pixelData[pixelIndex];
+            const g = pixelData[pixelIndex + 1];
+            const b = pixelData[pixelIndex + 2];
+            
+            const hexColor = rgbToHex(r, g, b);
+            o('clr').style.background = hexColor;
+
+            clrname = getColorName(hexColor);
+            if(clrname!=colorname) {
+                colorname = clrname;
+                clrn.innerHTML = colorname;
+
+                t=ws;
+    
+    if(colorname=="red") {
+        t=rs
+    }
+    else if(colorname=="blue") {
+        t=bs
+    }
+    else if(colorname=="green") {
+        t=gs
+    }
+    else if(colorname=="yellow") {
+        t=ys
+    }
+    else if(colorname=="black") {
+        t=bls
+    }
+    else {
+        t=ws
+    }
+    
+    while(c.firstChild) {
+        c.removeChild(c.firstChild);
+    }
+    imgs.splice(0, imgs.length);
+    
+    Object.keys(t).forEach(key => { 
+let img = document.createElement("img"); img.className = "item";
+img.src = t[key][0];
+img.onclick = () => { window.open(t[key][1], "_blank"); }
+imgs.push(img); c.appendChild(img); });
+    
+    for(let i=0;i<imgs.length;i++) {
+        c.scrollLeft=0;
+        imgs[i].style.animation = "none";
+        imgs[i].offsetHeight;
+        imgs[i].style.animation = "slideUp "+0.2*(i+1)+"s ease"
+    }
+}
+            
+        }, 100);
+    });
+                
+    function rgbToHex(r, g, b) {
+        return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+    }
+                
+    function getColorName(hexColor) {
+  // Remove "#" if present
+  hexColor = hexColor.replace("#", "");
+
+  // Convert hex to RGB
+  let r = parseInt(hexColor.substring(0, 2), 16);
+  let g = parseInt(hexColor.substring(2, 4), 16);
+  let b = parseInt(hexColor.substring(4, 6), 16);
+
+  // Define predefined colors with their RGB values
+  const predefinedColors = {
+    blue: { r: 0, g: 0, b: 255 },
+    green: { r: 0, g: 128, b: 0 },
+    yellow: { r: 255, g: 255, b: 0 },
+    red: { r: 255, g: 0, b: 0 },
+    white: { r: 255, g: 255, b: 255 },
+    black: { r: 0, g: 0, b: 0 }
+  };
+
+  // Calculate the Euclidean distance between the given color and each predefined color
+  let minDistance = Infinity;
+  let closestColor = "unknown";
+
+  for (const color in predefinedColors) {
+    const predefinedColor = predefinedColors[color];
+    const distance = Math.sqrt(Math.pow(r - predefinedColor.r, 2) + Math.pow(g - predefinedColor.g, 2) + Math.pow(b - predefinedColor.b, 2));
+
+    if (distance < minDistance) {
+      minDistance = distance;
+      closestColor = color;
+    }
+  }
+
+  return closestColor;
+}
+
+}
+        </script>
+        
+    </head>
+    <body>
+        <h1 id="clrn" style="position:absolute;color:white;background:black;top:0;width:100%;text-align:center;">Unknown</h1>
+        <img id="b" src="https://i.ibb.co/dMPgztC/ml.png" />
+        <div id="config">
+            <h3 id="stitle">Select your Gender</h3>
+            <div id="genders">
+                <img class="gt" id="gm" src="https://i.ibb.co/NKj6yDq/1710255819081.png"/>
+                <img class="gt" id="gf" src="https://i.ibb.co/NVycm00/1710255859530.png"/>
+            </div>
+            <div id="btype">
+                <img class="bt" id="l" src="https://i.ibb.co/kBtDRf1/sizel.png"/>
+                <img class="bt" id="xl" src="https://i.ibb.co/KxMXmzm/sizexl.png"/>
+                <img class="bt" id="xxl" src="https://i.ibb.co/MD0jdSW/sizexxl.png"/>
+            </div>
+        </div>
+        <video id="video" autoplay></video>
+        <canvas id="canvas"></canvas>
+        <div id="clr" style="position:absolute;margin-top:-25px;margin-left:-25px;top:50vh;left:50vw;height:50px;width:50px;border-radius:50%;border:1px solid white;z-index=100;"></div>
+        <div id="container"></div>
+    </body>
+</html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fit ur clothes</title>
+
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        
+        <style>
+            * {
+     padding:0;
+     margin:0;
+}
+
+body {
+background-image:url(https://i.ibb.co/RvnCSQh/IMG-20240312-201815.jpg);
+    background-repeat:no-repeat;
+    background-size:100vw 100vh;
+}
+
+#config {
+    height:100%;
+    width:100vw;
+    background:rgba(0,0,0,0.7);
+}
+
+h3 {
+   color:white;
+   width:100%;
+   font-size:30px;
+   margin-top:50%;
+   padding-top:15px;
+   text-align:center;
+}
+
+#genders , #btype {
+    display:flex;
+    justify-content:center;
+    align-content:space-between;
+}
+
+.gt {
+    height:30vw;
+    width:30vw;
+    margin:20px;
+}
+
+.bt {
+    height: 20vw;
+    width: 20vw;
+    margin:20px;
+}
+
+#btype {
+    display: none;
+}
+
+#b {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    display: none;
+}
+
+#video {
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+}
+canvas {
+    display: none;
+}
+            
+#container {
+    position:absolute;
+    bottom:0;
+    margin:10px;
+    height:30vw;
+    width:calc(100vw - 20px);
+    border-radius:20px;
+    background:rgba(255,255,255,0.8);
+    border:0px solid white;
+    display:flex;
+    overflow-x:auto;
+    padding-right:3px;
+    z-index:10;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  
+  80% { 
+  transform: translateY(-20%);
+  }
+  85% { 
+  transform: translateY(-15%);
+  }
+  90% { 
+  transform: translateY(-10%);
+  }
+  to { transform: translateY(0%); }
+}
+
+.item {
+    height: calc(30vw - 6px);
+    width: calc(30vw - 6px);
+    flex-shrink:0;
+    margin:3px;
+    margin-right:0px;
+    background:white;
+    border-radius:17px;
+    bottom:-100%;
+}
+
+        </style>
+        
+        
+        
+        <script>
+            window.onload = () => {
+
+    var colorname = "Unknown"
+    var clrn = o("clrn")
+    config =  o("config")
+    genders = o("genders")
+    title = o("stitle")
+    gm = o("gm")
+    gf = o("gf")
+    btype = o("btype")
+    m = false
+    
+    gm.onclick = () => {
+        title.innerHTML = "Choose your body type"
+        genders.style.display="none"
+        btype.style.display="flex"
+        m = true
+    }
+
+    gf.onclick = () => {
+        title.innerHTML = "Choose your body type"
+        genders.style.display="none"
+        btype.style.display="flex"
+        m = false
+    }
+
+    l = o("l")
+    xl = o("xl")
+    xxl = o("xxl")
+    b = o("b")
+
+    l.onclick = () => {
+        config.style.display = "none"
+        bl = ""
+        if(m)
+        bl = "https://i.ibb.co/dMPgztC/ml.png"
+        else
+        bl = "https://i.ibb.co/VCcVQwh/fl.png"
+        b.src = bl
+        b.style.display = "block"
+    }
+
+    xl.onclick = () => {
+        config.style.display = "none"
+        if(m)
+        bl = "https://i.ibb.co/jvk2cfL/mxl.png"
+        else
+        bl = "https://i.ibb.co/HB54ZcX/fxl.png"
+        b.src = bl
+        b.style.display = "block"
+    }
+
+    xxl.onclick = () => {
+        config.style.display = "none"
+        if(m)
+        bl = "https://i.ibb.co/p1Z4smH/mxxl.png"
+        else
+        bl = "https://i.ibb.co/zFy24Q1/fxxl.png"
+        b.src = bl
+        b.style.display = "block"
+    }
+    
+
+    function o(s) {
+        return document.getElementById(s)
+    }
+
+    var rs  = {
+  0: ["https://m.media-amazon.com/images/I/61h0+zRTcPL._SX679_.jpg", "https://amzn.eu/d/dLNREx6"],
+  1: ["https://m.media-amazon.com/images/I/51SJBZa4Q8L._SX679_.jpg", "https://amzn.eu/d/iuYPCXX"],
+  2: ["https://m.media-amazon.com/images/I/91qfIhneQSL._SX569_.jpg", "https://amzn.eu/d/31VhgCk"],
+  3: ["https://m.media-amazon.com/images/I/71ujJvq2CzL._SX679_.jpg", "https://amzn.eu/d/9nO17tF"],
+  4: ["https://m.media-amazon.com/images/I/91blYNbUkFL._SY879_.jpg", "https://amzn.eu/d/bK6AEc8"],
+  5: ["https://m.media-amazon.com/images/I/51Ri+3Gxo6L._SY879_.jpg", "https://amzn.eu/d/3b76O7l"],
+  6: ["https://m.media-amazon.com/images/I/81+ap29LFIL._SY879_.jpg", "https://amzn.eu/d/2MkS1WV"],
+  8: ["https://m.media-amazon.com/images/I/51TvT3+lZDL.jpg", "https://amzn.eu/d/4EQKy98"],
+  8: ["https://m.media-amazon.com/images/I/61yATkar4uL._SY741_.jpg", "https://amzn.eu/d/4WRYXSf"],
+  9: ["https://m.media-amazon.com/images/I/71ZGe3YWTVL._SY879_.jpg", "https://amzn.eu/d/8Rcxsu1"],
+};
+
+var bls  = {
+  0: ["https://m.media-amazon.com/images/I/61s3rT63mtL._SX679_.jpg", "https://amzn.eu/d/b7DwOGH"],
+  1: ["https://m.media-amazon.com/images/I/510bAxmzH9L._SX569_.jpg", "https://amzn.eu/d/7YUjHai"],
+  2: ["https://m.media-amazon.com/images/I/51zFNTawmsL._SX679_.jpg", "https://amzn.eu/d/eED7DlK"],
+  3: ["https://m.media-amazon.com/images/I/71zpxIhI7EL._SX679_.jpg", "https://amzn.eu/d/ez8mbQH"],
+  4: ["https://m.media-amazon.com/images/I/41aa2OQ-0YL._SY741_.jpg", "https://amzn.eu/d/1eDiJg9"],
+  5: ["https://m.media-amazon.com/images/I/714ZhKeE-lL._SY879_.jpg", "https://amzn.eu/d/gEb2SMo"],
+  6: ["https://m.media-amazon.com/images/I/71gxzNP0V3L._SY879_.jpg", "https://amzn.eu/d/0PYc9xl"],
+  7: ["https://m.media-amazon.com/images/I/61vrHdwwrZL._SX569_.jpg", "https://amzn.eu/d/8jsTkHX"],
+  8: ["https://m.media-amazon.com/images/I/618AldcT9TL._SY879_.jpg", "https://amzn.eu/d/9xmn4Zg"],
+  9: ["https://m.media-amazon.com/images/I/51D0RRDSG9L._SY879_.jpg", "https://amzn.eu/d/07et9mA"],
+};
+
+var gs = {
+  "r1": ["https://m.media-amazon.com/images/I/61zpAY7T5gL._SX522_.jpg", "https://amzn.eu/d/ajkHy6F"],
+  "r2": ["https://m.media-amazon.com/images/I/81Eevk5euiL._SY550_.jpg", "https://amzn.eu/d/iSarOtW"],
+  "r3": ["https://m.media-amazon.com/images/I/41RvwpwyI8L._SX522_.jpg", "https://amzn.eu/d/9GiLiHq"],
+  "r4": ["https://m.media-amazon.com/images/I/41LbgVjShOL._SY500_.jpg", "https://amzn.eu/d/fQkcxVP"],
+  "r1": ["https://m.media-amazon.com/images/I/719WpxrCNDL._SX522_.jpg", "https://amzn.eu/d/dv3wb9A"],
+  "r5": ["https://m.media-amazon.com/images/I/61RU4C9VyzL._SY679_.jpg", "https://amzn.eu/d/3E6JyKD"],
+  "r6": ["https://m.media-amazon.com/images/I/81OKA8E3EJL._SX679_.jpg", "https://amzn.eu/d/6rjum8a"],
+  "r7": ["https://m.media-amazon.com/images/I/51T70SlCdbL._SY679_.jpg", "https://amzn.eu/d/fw9IQ08"],
+  "r8": ["https://m.media-amazon.com/images/I/51srYM0odPL._SX679_.jpg", "https://amzn.eu/d/jl5Vs7k"],
+  "r9": ["https://m.media-amazon.com/images/I/71Ut3Q9EURL._SY550_.jpg", "https://amzn.eu/d/3jlMj3V"],
+  "r10": ["https://m.media-amazon.com/images/I/81a4XLOWv3L._SX522_.jpg", "https://amzn.eu/d/dcg59uq"]
+};
+                
+var bs  = {
+    "r1": ["https://m.media-amazon.com/images/I/81qTwN1N-SL._SX569_.jpg","https://www.amazon.in/Amazon-Brand-Symbol-Regular-SYMFS-01_Fil100C_Royal/dp/B097MV1RWK/ref=sr_1_4_sspa?dib=eyJ2IjoiMSJ9.W5Gqq2pmjJM70diRBak-0qwoAw9rpdwsi15frzzjXuRnCnAFP6zzrccYzNDR_Kq53nnxJXKXZLOAdT8y4mwUotSnkAriwcK3XGGA0T4RJd0FROcYpDpa_wLGXJkXCCKqm1QvUx-BH-aIQIrtsnb1D3BsdCsr715OKs8VKfsGNJEA67ct9qcXoWizTfZMYqdetp9OCs-jtGZa7tne1AFGu9fEdYKIrRBaLyf2q68_s_6rQ9knMc2SVjMRAMTIZjBVc_lpAxhVLpucq3P18EtnPndphRunH8jqG2tVLF-69AU.C_T_Kq-pNPRKFOxCmAJDIM4ogYWVQwmSvUx1G-DHOY0&dib_tag=se&keywords=blue+shirts+for+men&qid=1710751078&sr=8-4-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"],
+    "r2": ["https://m.media-amazon.com/images/I/51gfVvBq90L._SX679_.jpg","https://www.amazon.in/CB-COLEBROOK-Regular-Spread-Collar-Casual/dp/B0CGLM1PXH/ref=sr_1_11?dib=eyJ2IjoiMSJ9.W5Gqq2pmjJM70diRBak-0qwoAw9rpdwsi15frzzjXuRnCnAFP6zzrccYzNDR_Kq53nnxJXKXZLOAdT8y4mwUotSnkAriwcK3XGGA0T4RJd0FROcYpDpa_wLGXJkXCCKqm1QvUx-BH-aIQIrtsnb1D3BsdCsr715OKs8VKfsGNJEA67ct9qcXoWizTfZMYqdetp9OCs-jtGZa7tne1AFGu9fEdYKIrRBaLyf2q68_s_6rQ9knMc2SVjMRAMTIZjBVc_lpAxhVLpucq3P18EtnPndphRunH8jqG2tVLF-69AU.C_T_Kq-pNPRKFOxCmAJDIM4ogYWVQwmSvUx1G-DHOY0&dib_tag=se&keywords=blue+shirts+for+men&qid=1710751078&sr=8-11"],
+    "r3": ["https://m.media-amazon.com/images/I/71sV83AUROS._SX569_.jpg", "https://www.amazon.in/Van-Heusen-Plain-Formal-VHSFBSLPQ75225_Blue_44/dp/B07SSJD41D/ref=sr_1_20?dib=eyJ2IjoiMSJ9.W5Gqq2pmjJM70diRBak-0qwoAw9rpdwsi15frzzjXuRnCnAFP6zzrccYzNDR_Kq53nnxJXKXZLOAdT8y4mwUotSnkAriwcK3XGGA0T4RJd0FROcYpDpa_wLGXJkXCCKqm1QvUx-BH-aIQIrtsnb1D3BsdCsr715OKs8VKfsGNJEA67ct9qcXoWizTfZMYqdetp9OCs-jtGZa7tne1AFGu9fEdYKIrRBaLyf2q68_s_6rQ9knMc2SVjMRAMTIZjBVc_lpAxhVLpucq3P18EtnPndphRunH8jqG2tVLF-69AU.C_T_Kq-pNPRKFOxCmAJDIM4ogYWVQwmSvUx1G-DHOY0&dib_tag=se&keywords=blue+shirts+for+men&qid=1710751078&sr=8-20"],
+    "r4": ["https://m.media-amazon.com/images/I/61+7IZLXZeL._SX679_.jpg","https://www.amazon.in/Dennis-Lingo-Solid-Shirt-C615_A/dp/B09PD9Y92W/ref=sr_1_29?dib=eyJ2IjoiMSJ9.W5Gqq2pmjJM70diRBak-0qwoAw9rpdwsi15frzzjXuRnCnAFP6zzrccYzNDR_Kq53nnxJXKXZLOAdT8y4mwUotSnkAriwcK3XGGA0T4RJd0FROcYpDpa_wLGXJkXCCKqm1QvUx-BH-aIQIrtsnb1D3BsdCsr715OKs8VKfsGNJEA67ct9qcXoWizTfZMYqdetp9OCs-jtGZa7tne1AFGu9fEdYKIrRBaLyf2q68_s_6rQ9knMc2SVjMRAMTIZjBVc_lpAxhVLpucq3P18EtnPndphRunH8jqG2tVLF-69AU.C_T_Kq-pNPRKFOxCmAJDIM4ogYWVQwmSvUx1G-DHOY0&dib_tag=se&keywords=blue+shirts+for+men&qid=1710751078&sr=8-29"],
+    "r5": ["https://m.media-amazon.com/images/I/51ZOHh3dYcL._SX679_.jpg","https://www.amazon.in/RED-NINE-Mens-Blue-Shirt/dp/B0CSBVR8SQ/ref=sr_1_32?dib=eyJ2IjoiMSJ9.W5Gqq2pmjJM70diRBak-0qwoAw9rpdwsi15frzzjXuRnCnAFP6zzrccYzNDR_Kq53nnxJXKXZLOAdT8y4mwUotSnkAriwcK3XGGA0T4RJd0FROcYpDpa_wLGXJkXCCKqm1QvUx-BH-aIQIrtsnb1D3BsdCsr715OKs8VKfsGNJEA67ct9qcXoWizTfZMYqdetp9OCs-jtGZa7tne1AFGu9fEdYKIrRBaLyf2q68_s_6rQ9knMc2SVjMRAMTIZjBVc_lpAxhVLpucq3P18EtnPndphRunH8jqG2tVLF-69AU.C_T_Kq-pNPRKFOxCmAJDIM4ogYWVQwmSvUx1G-DHOY0&dib_tag=se&keywords=blue+shirts+for+men&qid=1710751078&sr=8-32"],
+    "r6": ["https://m.media-amazon.com/images/I/71wyB0EgtxL._SX679_.jpg","https://www.amazon.in/Raymond-Slim-Solid-Dark-Shirt/dp/B0CSP49K2V/ref=sr_1_106?dib=eyJ2IjoiMSJ9.qcb6tkw0d4KbRcfvDu2zBF0RkTu93d5toBKufvN9gpYG-YBLPvzhiQYFKGd_V4tXTVyYfVO7pGAm7vLv_uoX4zBcacsxhbJSue-ohdUdforB4-RoWrAv3jwLsLzf-9BiuWzjoxVtrjJCn3k2EiPDU7v6J9HRVup9vXAz5fVYi-cCruxYACubM2ZFN7YnRosAWgPMYpsn48ZZsXe-Dce8xrh_t01jf8P9wlFUZ3-SXmHRp07tgIfoje3NHNcc8Hl-mgk5jOFqsK8bZNSUh-DgOooe4KcF6Txp65OydgjoTGQ.-LdSH4labntVfbPKuvh8FIwrq2sFOyzcFWtVWF3aGdc&dib_tag=se&keywords=blue+shirts+for+men&qid=1710752310&sr=8-106"],
+    "r7": ["https://m.media-amazon.com/images/I/81Z3QfkJdZL._SX569_.jpg","https://www.amazon.in/United-Colors-Benetton-Shirt-5NS04U008I_Blue/dp/B08MV7PS7D/ref=sr_1_133?dib=eyJ2IjoiMSJ9.qcb6tkw0d4KbRcfvDu2zBF0RkTu93d5toBKufvN9gpYG-YBLPvzhiQYFKGd_V4tXTVyYfVO7pGAm7vLv_uoX4zBcacsxhbJSue-ohdUdforB4-RoWrAv3jwLsLzf-9BiuWzjoxVtrjJCn3k2EiPDU7v6J9HRVup9vXAz5fVYi-cCruxYACubM2ZFN7YnRosAWgPMYpsn48ZZsXe-Dce8xrh_t01jf8P9wlFUZ3-SXmHRp07tgIfoje3NHNcc8Hl-mgk5jOFqsK8bZNSUh-DgOooe4KcF6Txp65OydgjoTGQ.-LdSH4labntVfbPKuvh8FIwrq2sFOyzcFWtVWF3aGdc&dib_tag=se&keywords=blue+shirts+for+men&qid=1710752310&sr=8-133"],
+    "r8": ["https://m.media-amazon.com/images/I/61CGYVo2PlL._SX679_.jpg","https://www.amazon.in/Majestic-Man-Cotton-Casual-Medium/dp/B0B7DFF8BS/ref=sr_1_141?dib=eyJ2IjoiMSJ9.qcb6tkw0d4KbRcfvDu2zBF0RkTu93d5toBKufvN9gpYG-YBLPvzhiQYFKGd_V4tXTVyYfVO7pGAm7vLv_uoX4zBcacsxhbJSue-ohdUdforB4-RoWrAv3jwLsLzf-9BiuWzjoxVtrjJCn3k2EiPDU7v6J9HRVup9vXAz5fVYi-cCruxYACubM2ZFN7YnRosAWgPMYpsn48ZZsXe-Dce8xrh_t01jf8P9wlFUZ3-SXmHRp07tgIfoje3NHNcc8Hl-mgk5jOFqsK8bZNSUh-DgOooe4KcF6Txp65OydgjoTGQ.-LdSH4labntVfbPKuvh8FIwrq2sFOyzcFWtVWF3aGdc&dib_tag=se&keywords=blue+shirts+for+men&qid=1710752310&sr=8-141"],
+    "r9": ["https://m.media-amazon.com/images/I/711bgXSI0EL._SX679_.jpg","https://www.amazon.in/Park-Avenue-Cotton-Cutaway-Pattern/dp/B0CR6PZF95/ref=sr_1_160?dib=eyJ2IjoiMSJ9.6M1qNf4aOQKn0q7_CGL4NhJNgEAhdYw3mxe8swBkimpXwz1YH65InxGqUDAU31G6wPiH_tBzN9P_EDBEIez91MM1KQAxxKPeLtDxjYoRMcpnKcTb1J8Jqp8AnDxl_bU95BVid9T9CtYBBixxFZSbDcD4xcjg00pjgDpwygyZrOWHMxqSh7f4HKckuzKc7ZlLj53K_g-8EdhhhB9ld1q0WILCFOpvRV96Tjr26F0NTbyqaO9lFfec4-v-uopndWRm2R8CdwfXkY4Vd0nOM2Z6runkffu5DCfV0p6zIzyAtB4.46ztKjBSaXa_LP12SkunJuVzxOhdRvFqv_earF2muCA&dib_tag=se&keywords=blue+shirts+for+men&qid=1710752547&sr=8-160"],
+    "r10":["https://m.media-amazon.com/images/I/91EWDo4+-XL._SY879_.jpg","https://www.amazon.in/Diverse-Printed-Cotton-Formal-DVF05F2L01-344_42_Navy/dp/B0774K2KWG/ref=sr_1_187?dib=eyJ2IjoiMSJ9.6M1qNf4aOQKn0q7_CGL4NhJNgEAhdYw3mxe8swBkimpXwz1YH65InxGqUDAU31G6wPiH_tBzN9P_EDBEIez91MM1KQAxxKPeLtDxjYoRMcpnKcTb1J8Jqp8AnDxl_bU95BVid9T9CtYBBixxFZSbDcD4xcjg00pjgDpwygyZrOWHMxqSh7f4HKckuzKc7ZlLj53K_g-8EdhhhB9ld1q0WILCFOpvRV96Tjr26F0NTbyqaO9lFfec4-v-uopndWRm2R8CdwfXkY4Vd0nOM2Z6runkffu5DCfV0p6zIzyAtB4.46ztKjBSaXa_LP12SkunJuVzxOhdRvFqv_earF2muCA&dib_tag=se&keywords=blue+shirts+for+men&qid=1710752547&sr=8-187"],
+    "r11":["https://m.media-amazon.com/images/I/81DztBrXmQL._SX569_.jpg","https://www.amazon.in/Arrow-Mens-Design-Shirt-ARADOSH0104_Beige/dp/B09RT3749S/ref=sr_1_256?dib=eyJ2IjoiMSJ9.5hn6RZ1vfzkhX4pOahrMfD-BVjBA5h2uUjZ9Zt-nyqIMcsMZSBqOnBpsd4_LjrS20FpPY3ft8nSaFEUfJuNQAH7yZuAYMtO6Jb10HqjkIaypctpRqtsg4XK6LwRZI_mWDOorPrURKzjFyHTGWV_sq8JKgdY9Pwl3SyWSdXnvUg7FU5g0qojvlTcRrS8yt-PJUMjKFwinVYZBy-SKKgsJXXSEQEtZ6KJ7GdPYJiW7vJQkKbEy1iJLjee9u3N-Evaj19Db_IuQEjbTkUCEgysxWMH7A65i03QLzgWA8nrb8yw.hlQAp5Cq5Ra1oEHJhX7OesMyMIKU1WqrAZccMx9bHKo&dib_tag=se&keywords=blue+shirts+for+men&qid=1710752716&sr=8-256"],
+    };
+                
+var ys = {
+  "r1": ["https://m.media-amazon.com/images/I/71RbppHqGOL._SX679_.jpg", "https://www.amazon.in/PEBCO-Solid-Mens-Shirt-Yellow/dp/B0CQT1CWCK/ref=sr_1_1_sspa?crid=3NE03KAWCAHVY&dib=eyJ2IjoiMSJ9.ceOLjuq8zUzwUqWD_fbUwPuBaVe9lMqCPbfh-5hJnkYu0M-xXvrZ6roF28qD17nAcLxxq4reETbzC2pKUiyfJV8WZnzp-7KeEUTUNDiWZEIIAQkkLxPlpKZc75g9SGxepT8RqnStXB9B2NNOtOCnZQbx-V5sOr4C9VhcbrrO5Dy46Jtz06z1afD4cEqATJLfDCzq4Kl4h6grokQ6ZZSqPr62UJFCvdS4WM6papcKywiYzy88xB0JlOfKRWkW1n-D2zS_QX-ZHNi7w4ivlx_wLQL3Mp9e2b3SFPSY9Yu4-Pw.H3xTG457HXrf5VBBTQUF9ePPZh3uMtqgVByY9c6Qwkg&dib_tag=se&keywords=yellow+shirts+for+men&qid=1710652660&sprefix=yelloshirts+for+men%2Caps%2C271&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"],
+  "r2": ["https://m.media-amazon.com/images/I/51keXJDYYhL._SY741_.jpg","https://www.amazon.in/Zombom-Cotton-Regular-Mandarin-XX-Large/dp/B0CQVPNG9L/ref=sr_1_5?crid=3NE03KAWCAHVY&dib=eyJ2IjoiMSJ9.ceOLjuq8zUzwUqWD_fbUwPuBaVe9lMqCPbfh-5hJnkYu0M-xXvrZ6roF28qD17nAcLxxq4reETbzC2pKUiyfJV8WZnzp-7KeEUTUNDiWZEIIAQkkLxPlpKZc75g9SGxepT8RqnStXB9B2NNOtOCnZQbx-V5sOr4C9VhcbrrO5Dy46Jtz06z1afD4cEqATJLfDCzq4Kl4h6grokQ6ZZSqPr62UJFCvdS4WM6papcKywiYzy88xB0JlOfKRWkW1n-D2zS_QX-ZHNi7w4ivlx_wLQL3Mp9e2b3SFPSY9Yu4-Pw.H3xTG457HXrf5VBBTQUF9ePPZh3uMtqgVByY9c6Qwkg&dib_tag=se&keywords=yellow+shirts+for+men&qid=1710652660&sprefix=yelloshirts+for+men%2Caps%2C271&sr=8-5"],
+  "r3": ["https://m.media-amazon.com/images/I/613u0sfeR9L._SX679_.jpg", "https://www.amazon.in/Majestic-Man-Solid-Casual-Mustard/dp/B09X9SSBPW/ref=sr_1_8?crid=3NE03KAWCAHVY&dib=eyJ2IjoiMSJ9.ceOLjuq8zUzwUqWD_fbUwPuBaVe9lMqCPbfh-5hJnkYu0M-xXvrZ6roF28qD17nAcLxxq4reETbzC2pKUiyfJV8WZnzp-7KeEUTUNDiWZEIIAQkkLxPlpKZc75g9SGxepT8RqnStXB9B2NNOtOCnZQbx-V5sOr4C9VhcbrrO5Dy46Jtz06z1afD4cEqATJLfDCzq4Kl4h6grokQ6ZZSqPr62UJFCvdS4WM6papcKywiYzy88xB0JlOfKRWkW1n-D2zS_QX-ZHNi7w4ivlx_wLQL3Mp9e2b3SFPSY9Yu4-Pw.H3xTG457HXrf5VBBTQUF9ePPZh3uMtqgVByY9c6Qwkg&dib_tag=se&keywords=yellow+shirts+for+men&qid=1710652660&sprefix=yelloshirts+for+men%2Caps%2C271&sr=8-8"],
+  "r4": ["https://m.media-amazon.com/images/I/71s5yxLxspL._SY741_.jpg","https://www.amazon.in/YHA-Solid-Shirt-Regular-Mustard/dp/B09NC46XHC/ref=sr_1_12?crid=3NE03KAWCAHVY&dib=eyJ2IjoiMSJ9.ceOLjuq8zUzwUqWD_fbUwPuBaVe9lMqCPbfh-5hJnkYu0M-xXvrZ6roF28qD17nAcLxxq4reETbzC2pKUiyfJV8WZnzp-7KeEUTUNDiWZEIIAQkkLxPlpKZc75g9SGxepT8RqnStXB9B2NNOtOCnZQbx-V5sOr4C9VhcbrrO5Dy46Jtz06z1afD4cEqATJLfDCzq4Kl4h6grokQ6ZZSqPr62UJFCvdS4WM6papcKywiYzy88xB0JlOfKRWkW1n-D2zS_QX-ZHNi7w4ivlx_wLQL3Mp9e2b3SFPSY9Yu4-Pw.H3xTG457HXrf5VBBTQUF9ePPZh3uMtqgVByY9c6Qwkg&dib_tag=se&keywords=yellow+shirts+for+men&qid=1710652660&sprefix=yelloshirts+for+men%2Caps%2C271&sr=8-12"],
+  "r5": ["https://m.media-amazon.com/images/I/511zO6yrqvS._SX569_.jpg","https://www.amazon.in/Gauri-Laxmi-Enterprise-Straight-38/dp/B099PNMQ9G/ref=sr_1_27?crid=3NE03KAWCAHVY&dib=eyJ2IjoiMSJ9.ceOLjuq8zUzwUqWD_fbUwPuBaVe9lMqCPbfh-5hJnkYu0M-xXvrZ6roF28qD17nAcLxxq4reETbzC2pKUiyfJV8WZnzp-7KeEUTUNDiWZEIIAQkkLxPlpKZc75g9SGxepT8RqnStXB9B2NNOtOCnZQbx-V5sOr4C9VhcbrrO5Dy46Jtz06z1afD4cEqATJLfDCzq4Kl4h6grokQ6ZZSqPr62UJFCvdS4WM6papcKywiYzy88xB0JlOfKRWkW1n-D2zS_QX-ZHNi7w4ivlx_wLQL3Mp9e2b3SFPSY9Yu4-Pw.H3xTG457HXrf5VBBTQUF9ePPZh3uMtqgVByY9c6Qwkg&dib_tag=se&keywords=yellow+shirts+for+men&qid=1710652660&sprefix=yelloshirts+for+men%2Caps%2C271&sr=8-27"],
+  "r6": ["https://m.media-amazon.com/images/I/51N+NhdLzNL._SX679_.jpg","https://www.amazon.in/CB-COLEBROOK-Regular-Spread-Collar-XX-Large/dp/B0CQC2ZR63/ref=sr_1_41?crid=3NE03KAWCAHVY&dib=eyJ2IjoiMSJ9.ceOLjuq8zUzwUqWD_fbUwPuBaVe9lMqCPbfh-5hJnkYu0M-xXvrZ6roF28qD17nAcLxxq4reETbzC2pKUiyfJV8WZnzp-7KeEUTUNDiWZEIIAQkkLxPlpKZc75g9SGxepT8RqnStXB9B2NNOtOCnZQbx-V5sOr4C9VhcbrrO5Dy46Jtz06z1afD4cEqATJLfDCzq4Kl4h6grokQ6ZZSqPr62UJFCvdS4WM6papcKywiYzy88xB0JlOfKRWkW1n-D2zS_QX-ZHNi7w4ivlx_wLQL3Mp9e2b3SFPSY9Yu4-Pw.H3xTG457HXrf5VBBTQUF9ePPZh3uMtqgVByY9c6Qwkg&dib_tag=se&keywords=yellow+shirts+for+men&qid=1710652660&sprefix=yelloshirts+for+men%2Caps%2C271&sr=8-41"],
+  "r7": ["https://m.media-amazon.com/images/I/61IetdS7OoL._SY741_.jpg","https://www.amazon.in/Allen-Solly-Regular-Shirt-ALSFVCUFZ01198_Yellow/dp/B0CJJ5STSP/ref=sr_1_52?crid=3NE03KAWCAHVY&dib=eyJ2IjoiMSJ9.q7MzIqVm60vLiQsqP7JcwJpNpP6U5WVZGEFL8orFmeDgSr3hfJWzqOrmgzuIhVqIg1IzyPsLQ9QudtOzGJWpLbF2VeVO6zebJ8utQwr_D8LX07h-nW48deYe27meuZWqwAzhIhKpIpImhEH6OskGFC1DvfYB_VXOi-0EVmolcUdwId4iBPBloH0tenGl3gSIbV59Yb0JP-gLMzzjufZriZw8Y2r-Dtmkx4rRW8-fnMaHFcGZIDiajG26fVb4v_RED56ljQdPpG2GPobxRTSGBx7E8m2N3e6g67orcZ8yL3s.WzJyFxAfxBLMYpC1BO_t0pW57mtBiC5c59-0cinacMI&dib_tag=se&keywords=yellow+shirts+for+men&qid=1710654009&sprefix=yelloshirts+for+men%2Caps%2C271&sr=8-52"],
+  "r8": ["https://m.media-amazon.com/images/I/610rPUMUYIL._SX679_.jpg","https://www.amazon.in/RAMRAJ-COTTON-Mustard-Yellow-Sleeve/dp/B0CJYFHSR9/ref=sr_1_247?crid=3VB378KTR08CA&dib=eyJ2IjoiMSJ9.aacZnBpDG1YIpSE43JVp13l3h5CF7a9MJb5BDKf1JyLrpWsl8VMuTqNvi6A179Y_cxP92KE48dQsnFxHPzlbQG8gaAvVzNqtDrd7F-DcwttIfYdxZSIa7FU0mvz1kB-YZmcBIDnAe0Fnx7ZinyGjNZMEbe8QDoIH2Q-TIdZqfQjSpAXLDcvGo11XYyel_b5CFJJkQsMbKNNsZUloccOwUOQ3gy52Cq4ufYmslcQr9y92eW-E8NVL7MFYI6plse_AJTRnCgCaQ4HbugXJ-yYs-zwm73XOkH-TwdfGjVSLQhk.NqvPkMhV5cAj0qEWoZ-yZmZdG5NOkRdwmXSmzUC2ceE&dib_tag=se&keywords=yellow+shirts+for+men&qid=1710654196&sprefix=%2Caps%2C412&sr=8-247"],
+  "r9": ["https://rukminim2.flixcart.com/image/832/832/xif0q/shirt/w/e/h/l-pic-spopcorn097-indiclub-original-imagu7uk7zkc4sfr.jpeg?q=70&crop=false","https://www.flipkart.com/indiclub-men-self-design-casual-yellow-shirt/p/itm918ea676fc736?pid=SHTGU7UHKJYDAQZR&lid=LSTSHTGU7UHKJYDAQZRVPSNRB&marketplace=FLIPKART&q=yellow+shirts&store=clo%2Fash%2Faxc%2Fmmk%2Fkp7&srno=s_1_1&otracker=search&otracker1=search&fm=organic&iid=en_Z7VAEn67FJk97jAEOJgsat2XlCCBIedl8IijlryZqcsWq2CL4iNP_AZuqN8Te-0rgQk6Lqs0RIMBD6oxH2lmfg%3D%3D&ppt=None&ppn=None&ssid=5nkvyg50fk0000001710738314053&qH=545f32041ebd177f"],
+  "r10": ["https://rukminim2.flixcart.com/image/832/832/kfu0h3k0-0/shirt/g/t/z/40-assfqmofb38511-allen-solly-original-imafw6v9zzcgdrhw.jpeg?q=70&crop=false", "https://www.flipkart.com/allen-solly-men-solid-casual-yellow-shirt/p/itm99b43442e9632?pid=SHTFUSCDMAJP2QCG&lid=LSTSHTFUSCDMAJP2QCGXTM0EL&marketplace=FLIPKART&q=yellow+shirts&store=clo%2Fash%2Faxc%2Fmmk%2Fkp7&srno=s_1_14&otracker=search&otracker1=search&fm=Search&iid=0c19aab9-44d2-4c78-9fc5-e340f76559e5.SHTFUSCDMAJP2QCG.SEARCH&ppt=sp&ppn=sp&ssid=ncuz5a6db40000001710738327554&qH=545f32041ebd177f"],
+  "r11": ["https://rukminim2.flixcart.com/image/832/832/xif0q/shirt/u/7/r/4xl-mshps1bc103mustardyellow-spykar-original-imaghsdwqwjmhkvz.jpeg?q=70&crop=false", "https://www.flipkart.com/spykar-men-printed-casual-yellow-shirt/p/itmc0eb49d14e385?pid=SHTGHSDXS9AGT4BH&lid=LSTSHTGHSDXS9AGT4BHG9B6OB&marketplace=FLIPKART&q=yellow+shirts&store=clo%2Fash%2Faxc%2Fmmk%2Fkp7&srno=s_1_36&otracker=search&otracker1=search&fm=Search&iid=0c19aab9-44d2-4c78-9fc5-e340f76559e5.SHTGHSDXS9AGT4BH.SEARCH&ppt=sp&ppn=sp&qH=545f32041ebd177f"],
+  "r12": ["https://rukminim2.flixcart.com/image/832/832/kiow6fk0-0/shirt/m/6/h/m-5ns03u008i-904-united-colors-of-benetton-original-imafyf6gqq3nrjp4.jpeg?q=70&crop=false", "https://www.flipkart.com/united-colors-benetton-men-checkered-casual-yellow-shirt/p/itm556f970cff548?pid=SHTFX7X9JXSE4XNJ&lid=LSTSHTFX7X9JXSE4XNJDYPUFC&marketplace=FLIPKART&q=yellow+shirts&store=clo%2Fash%2Faxc%2Fmmk%2Fkp7&srno=s_9_333&otracker=search&otracker1=search&fm=Search&iid=8d4d9ee5-2877-485b-846d-4e1a096dd76b.SHTFX7X9JXSE4XNJ.SEARCH&ppt=sp&ppn=sp&qH=545f32041ebd177f"]
+  };
+                
+var ws = {
+  0: ["https://m.media-amazon.com/images/I/51inUyV2tdL._SX569_.jpg", "https://amzn.eu/d/6B274Gv"],
+  1: ["https://m.media-amazon.com/images/I/61MMzZFJbWL._SX569_.jpg", "https://amzn.eu/d/eu4GC3M"],
+  2: ["https://m.media-amazon.com/images/I/81BZZBbyl3L._SY550_.jpg", "https://amzn.eu/d/9JBNmkJ"],
+  "r4": ["https://m.media-amazon.com/images/I/51QUVbrtT0L._SX522_.jpg", "https://amzn.eu/d/hO3h29u"],
+  "r5": ["https://m.media-amazon.com/images/I/71xA2DZQKEL._SY679_.jpg", "https://amzn.eu/d/6hJ2a6X"],
+  "r6": ["https://m.media-amazon.com/images/I/715Gcc34mvL._SY550_.jpg", "https://amzn.eu/d/fhYvEOP"],
+  "r7": ["https://m.media-amazon.com/images/I/51NfwK2PKkL._SY679_.jpg", "https://amzn.eu/d/1BKc8J0"],
+  "r8": ["https://m.media-amazon.com/images/I/71nMh-+b12L._SY550_.jpg", "https://amzn.eu/d/909fDl9"],
+  "r9": ["https://m.media-amazon.com/images/I/61rXihuKpLL._SX425_.jpg", "https://amzn.eu/d/cax0myO"],
+  "r10": ["https://m.media-amazon.com/images/I/610TMotfYML._SY679_.jpg", "https://amzn.eu/d/2hpwreF"]
+};
+
+    
+    
+
+var c = document.getElementById("container");
+var imgs = [];
+
+Object.keys(rs).forEach(key => { 
+let img = document.createElement("img"); img.className = "item";
+img.src = rs[key][0];
+img.onclick = () => { window.open(rs[key][1], "_blank"); }
+imgs.push(img); c.appendChild(img); });
+            
+
+    const video = o('video');
+    const canvas = o('canvas');
+    const context = canvas.getContext('2d');
+    const circleRadius = 10; // radius of the circle
+
+    // Request access to the camera
+    navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } })
+    .then((stream) => {
+        video.srcObject = stream;
+    })
+    .catch((err) => {
+        console.error('Error accessing the camera:', err);
+    });
+
+    video.addEventListener('play', () => {
+        const width = video.videoWidth;
+        const height = video.videoHeight;
+
+        canvas.width = width;
+        canvas.height = height;
+
+        setInterval(() => {
+            context.drawImage(video, 0, 0, width, height);
+            const imageData = context.getImageData(0, 0, width, height);
+            const pixelData = imageData.data;
+
+            const centerX = Math.floor(width / 2);
+            const centerY = Math.floor(height / 2);
+            
+            context.beginPath();
+            context.arc(centerX, centerY, circleRadius, 0, 2 * Math.PI);
+            context.strokeStyle = 'red'; // Circle color
+            context.lineWidth = 2;
+            context.stroke();
+            
+            const pixelIndex = (centerY * width + centerX) * 4;
+            const r = pixelData[pixelIndex];
+            const g = pixelData[pixelIndex + 1];
+            const b = pixelData[pixelIndex + 2];
+            
+            const hexColor = rgbToHex(r, g, b);
+            o('clr').style.background = hexColor;
+
+            clrname = getColorName(hexColor);
+            if(clrname!=colorname) {
+                colorname = clrname;
+                clrn.innerHTML = colorname;
+
+                t=ws;
+    
+    if(colorname=="red") {
+        t=rs
+    }
+    else if(colorname=="blue") {
+        t=bs
+    }
+    else if(colorname=="green") {
+        t=gs
+    }
+    else if(colorname=="yellow") {
+        t=ys
+    }
+    else if(colorname=="black") {
+        t=bls
+    }
+    else {
+        t=ws
+    }
+    
+    while(c.firstChild) {
+        c.removeChild(c.firstChild);
+    }
+    imgs.splice(0, imgs.length);
+    
+    Object.keys(t).forEach(key => { 
+let img = document.createElement("img"); img.className = "item";
+img.src = t[key][0];
+img.onclick = () => { window.open(t[key][1], "_blank"); }
+imgs.push(img); c.appendChild(img); });
+    
+    for(let i=0;i<imgs.length;i++) {
+        c.scrollLeft=0;
+        imgs[i].style.animation = "none";
+        imgs[i].offsetHeight;
+        imgs[i].style.animation = "slideUp "+0.2*(i+1)+"s ease"
+    }
+}
+            
+        }, 100);
+    });
+                
+    function rgbToHex(r, g, b) {
+        return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+    }
+                
+    function getColorName(hexColor) {
+  // Remove "#" if present
+  hexColor = hexColor.replace("#", "");
+
+  // Convert hex to RGB
+  let r = parseInt(hexColor.substring(0, 2), 16);
+  let g = parseInt(hexColor.substring(2, 4), 16);
+  let b = parseInt(hexColor.substring(4, 6), 16);
+
+  // Define predefined colors with their RGB values
+  const predefinedColors = {
+    blue: { r: 0, g: 0, b: 255 },
+    green: { r: 0, g: 128, b: 0 },
+    yellow: { r: 255, g: 255, b: 0 },
+    red: { r: 255, g: 0, b: 0 },
+    white: { r: 255, g: 255, b: 255 },
+    black: { r: 0, g: 0, b: 0 }
+  };
+
+  // Calculate the Euclidean distance between the given color and each predefined color
+  let minDistance = Infinity;
+  let closestColor = "unknown";
+
+  for (const color in predefinedColors) {
+    const predefinedColor = predefinedColors[color];
+    const distance = Math.sqrt(Math.pow(r - predefinedColor.r, 2) + Math.pow(g - predefinedColor.g, 2) + Math.pow(b - predefinedColor.b, 2));
+
+    if (distance < minDistance) {
+      minDistance = distance;
+      closestColor = color;
+    }
+  }
+
+  return closestColor;
+}
+
+}
+        </script>
+        
+    </head>
+    <body>
+        <h1 id="clrn" style="position:absolute;color:white;background:black;top:0;width:100%;text-align:center;">Unknown</h1>
+        <img id="b" src="https://i.ibb.co/dMPgztC/ml.png" />
+        <div id="config">
+            <h3 id="stitle">Select your Gender</h3>
+            <div id="genders">
+                <img class="gt" id="gm" src="https://i.ibb.co/NKj6yDq/1710255819081.png"/>
+                <img class="gt" id="gf" src="https://i.ibb.co/NVycm00/1710255859530.png"/>
+            </div>
+            <div id="btype">
+                <img class="bt" id="l" src="https://i.ibb.co/kBtDRf1/sizel.png"/>
+                <img class="bt" id="xl" src="https://i.ibb.co/KxMXmzm/sizexl.png"/>
+                <img class="bt" id="xxl" src="https://i.ibb.co/MD0jdSW/sizexxl.png"/>
+            </div>
+        </div>
+        <video id="video" autoplay></video>
+        <canvas id="canvas"></canvas>
+        <div id="clr" style="position:absolute;margin-top:-25px;margin-left:-25px;top:50vh;left:50vw;height:50px;width:50px;border-radius:50%;border:1px solid white;z-index=100;"></div>
+        <div id="container"></div>
+    </body>
+</html>

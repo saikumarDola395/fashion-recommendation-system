@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>romofyi</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="./static/css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="./static/css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="./static/css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="./static/images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="./static/css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
+      <style>
+         /*body {
+             background-color:pink;
+             font-family: Arial, sans-serif;
+             margin: 0;
+             padding: 0;
+         }
+         .container {
+             width: 100%;
+             margin: 0 auto;
+             padding: 20px;
+         }*/
+         .product_main .card {
+             background-color: #f8f9fa;
+             border: 1px solid #dee2e6;
+             border-radius: 0.25rem;
+             padding: 20px;
+             margin-bottom: 20px;
+             display: inline-block;
+             width: 200px;
+             text-align: center;
+         }
+         .product_main .card img {
+             width: 100%;
+             height: 200px;
+             object-fit:contain;
+         }
+         .product_main .card h3 {
+             margin: 10px 0;
+         }
+         .product_main .card p {
+             margin: 0;
+         }
+     </style>
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="./static/images/loading.gif" alt="#" /></div>
+      </div>
+      <!-- end loader -->
+      <!-- header -->
+      <header>
+         <!-- header inner -->
+         <div class="header">
+            <!-- <div class="header_top d_none1">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-4">
+                        <ul class="conta_icon ">
+                           <li><a href="#"><img src="./static/images/call.png" alt="#"/>Call us: 0126 - 922 - 0162</a> </li>
+                        </ul>
+                     </div>
+                     <div class="col-md-4">
+                        <ul class="social_icon">
+                           <li> <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i>
+                              </a>
+                           </li>
+                           <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
+                           <li> <a href="#"> <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                           <li> <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i>
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="se_fonr1">
+                           <form action="#" >
+                              <div class="select-box">
+                                 <label for="select-box1" class="label select-box1"><span class="label-desc">English</span> </label>
+                                 <select id="select-box1" class="select">
+                                    <option value="Choice 1">English</option>
+                                    <option value="Choice 1">Falkla</option>
+                                    <option value="Choice 2">Germa</option>
+                                    <option value="Choice 3">Neverl</option>
+                                 </select>
+                              </div>
+                           </form>
+                           <span class="time_o"> Open hour: 8.00 - 18.00</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div> -->
+            <div class="header_midil">
+               <div class="container">
+                  <div class="row d_flex">
+                     <div class="col-md-4">
+                        <ul class="conta_icon d_none1">
+                           <li><a href="#"><img src="./static/images/email.png" alt="#"/>amigos@gmail.com</a> </li>
+                        </ul>
+                     </div>
+                     <div class="col-md-4">
+                        <a class="logo" href="#" style="height: 40px;"><img style="height: 40px;" src="https://i.ibb.co/ZNfr3Hk/logo.jpg" alt="#"/></a>
+                     </div>
+                     <div class="col-md-4">
+                        <ul class="right_icon d_none1">
+                           <li><a href="#"><img src="./static/images/shopping.png" alt="#"/></a> </li>
+                           <a href="#" class="order">Order Now</a> 
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="header_bottom">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                        <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                           <span class="navbar-toggler-icon"></span>
+                           </button>
+                           <div class="collapse navbar-collapse" id="navbarsExample04">
+                              <ul class="navbar-nav mr-auto">
+                                 <li class="nav-item active">
+                                    <a class="nav-link" href="/">Home</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="about">About</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="products">Products</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="fashion">Fashion</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="news">News</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="contact">Contact</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="upload">Upload</a>
+                                 </li>
+                              </ul>
+                              
+                           </div>
+                        </nav>
+                     </div>
+                     <div class="col-md-3">
+                        <div class="search">
+                              <input class="form_sea" type="text" placeholder="Search" id="srch" name="search">
+                              <button type="submit" id="forsearch"  onclick="navigate()"class="seach_icon"><i class="fa fa-search"></i></button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- end header inner -->
+      <!-- end header -->
+      
+      <!-- project section -->
+      <div id="project" class="project">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2>Fashion Recommendation System</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="product_main">
+                  
+        <div class="card">
+            <a href="https://www.amazon.in/PEBCO-Solid-Mens-Shirt-Yellow/dp/B0CQT1CWCK/ref=sr_1_1_sspa?crid=3NE03KAWCAHVY&dib=eyJ2IjoiMSJ9.ceOLjuq8zUzwUqWD_fbUwPuBaVe9lMqCPbfh-5hJnkYu0M-xXvrZ6roF28qD17nAcLxxq4reETbzC2pKUiyfJV8WZnzp-7KeEUTUNDiWZEIIAQkkLxPlpKZc75g9SGxepT8RqnStXB9B2NNOtOCnZQbx-V5sOr4C9VhcbrrO5Dy46Jtz06z1afD4cEqATJLfDCzq4Kl4h6grokQ6ZZSqPr62UJFCvdS4WM6papcKywiYzy88xB0JlOfKRWkW1n-D2zS_QX-ZHNi7w4ivlx_wLQL3Mp9e2b3SFPSY9Yu4-Pw.H3xTG457HXrf5VBBTQUF9ePPZh3uMtqgVByY9c6Qwkg&dib_tag=se&keywords=yellow+shirts+for+men&qid=1710652660&sprefix=yelloshirts+for+men%2Caps%2C271&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1">
+                        <img src="https://m.media-amazon.com/images/I/71RbppHqGOL._SX679_.jpg" alt="Product 1">
+            </a>
+                        <h3>Product 1</h3>
+                        <p>Price: $1</p>
+                    </div>
+                    <div class="card">
+            
+                        <a href="https://www.amazon.in/Zombom-Cotton-Regular-Mandarin-XX-Large/dp/B0CQVPNG9L/ref=sr_1_5?crid=3NE03KAWCAHVY&dib=eyJ2IjoiMSJ9.ceOLjuq8zUzwUqWD_fbUwPuBaVe9lMqCPbfh-5hJnkYu0M-xXvrZ6roF28qD17nAcLxxq4reETbzC2pKUiyfJV8WZnzp-7KeEUTUNDiWZEIIAQkkLxPlpKZc75g9SGxepT8RqnStXB9B2NNOtOCnZQbx-V5sOr4C9VhcbrrO5Dy46Jtz06z1afD4cEqATJLfDCzq4Kl4h6grokQ6ZZSqPr62UJFCvdS4WM6papcKywiYzy88xB0JlOfKRWkW1n-D2zS_QX-ZHNi7w4ivlx_wLQL3Mp9e2b3SFPSY9Yu4-Pw.H3xTG457HXrf5VBBTQUF9ePPZh3uMtqgVByY9c6Qwkg&dib_tag=se&keywords=yellow+shirts+for+men&qid=1710652660&sprefix=yelloshirts+for+men%2Caps%2C271&sr=8-5">
+              <img src="https://m.media-amazon.com/images/I/51keXJDYYhL._SY741_.jpg" alt="Description of the image">
+            </a>
+                        <h3>Product 2</h3>
+                        <p>Price: $150</p>
+                    </div>
+            <div class="card">
+            <a href="https://www.amazon.in/Majestic-Man-Solid-Casual-Mustard/dp/B09X9SSBPW/ref=sr_1_8?crid=3NE03KAWCAHVY&dib=eyJ2IjoiMSJ9.ceOLjuq8zUzwUqWD_fbUwPuBaVe9lMqCPbfh-5hJnkYu0M-xXvrZ6roF28qD17nAcLxxq4reETbzC2pKUiyfJV8WZnzp-7KeEUTUNDiWZEIIAQkkLxPlpKZc75g9SGxepT8RqnStXB9B2NNOtOCnZQbx-V5sOr4C9VhcbrrO5Dy46Jtz06z1afD4cEqATJLfDCzq4Kl4h6grokQ6ZZSqPr62UJFCvdS4WM6papcKywiYzy88xB0JlOfKRWkW1n-D2zS_QX-ZHNi7w4ivlx_wLQL3Mp9e2b3SFPSY9Yu4-Pw.H3xTG457HXrf5VBBTQUF9ePPZh3uMtqgVByY9c6Qwkg&dib_tag=se&keywords=yellow+shirts+for+men&qid=1710652660&sprefix=yelloshirts+for+men%2Caps%2C271&sr=8-8">
+                        <img src="https://m.media-amazon.com/images/I/613u0sfeR9L._SX679_.jpg" alt="Product 1">
+            </a>
+                        <h3>Product 3</h3>
+                        <p>Price: $100</p>
+                    </div>
+            
+            <div class="card">
+                     <a href="https://www.amazon.in/YHA-Solid-Shirt-Regular-Mustard/dp/B09NC46XHC/ref=sr_1_12?crid=3NE03KAWCAHVY&dib=eyJ2IjoiMSJ9.ceOLjuq8zUzwUqWD_fbUwPuBaVe9lMqCPbfh-5hJnkYu0M-xXvrZ6roF28qD17nAcLxxq4reETbzC2pKUiyfJV8WZnzp-7KeEUTUNDiWZEIIAQkkLxPlpKZc75g9SGxepT8RqnStXB9B2NNOtOCnZQbx-V5sOr4C9VhcbrrO5Dy46Jtz06z1afD4cEqATJLfDCzq4Kl4h6grokQ6ZZSqPr62UJFCvdS4WM6papcKywiYzy88xB0JlOfKRWkW1n-D2zS_QX-ZHNi7w4ivlx_wLQL3Mp9e2b3SFPSY9Yu4-Pw.H3xTG457HXrf5VBBTQUF9ePPZh3uMtqgVByY9c6Qwkg&dib_tag=se&keywords=yellow+shirts+for+men&qid=1710652660&sprefix=yelloshirts+for+men%2Caps%2C271&sr=8-12">
+              <img src="https://m.media-amazon.com/images/I/71s5yxLxspL._SY741_.jpg" alt="Product 1">
+            </a>
+                        
+                        <h3>Product 4</h3>
+                        <p>Price: $100</p>
+                    </div>
+            
+            <div class="card">
+               <a href="https://www.amazon.in/Gauri-Laxmi-Enterprise-Straight-38/dp/B099PNMQ9G/ref=sr_1_27?crid=3NE03KAWCAHVY&dib=eyJ2IjoiMSJ9.ceOLjuq8zUzwUqWD_fbUwPuBaVe9lMqCPbfh-5hJnkYu0M-xXvrZ6roF28qD17nAcLxxq4reETbzC2pKUiyfJV8WZnzp-7KeEUTUNDiWZEIIAQkkLxPlpKZc75g9SGxepT8RqnStXB9B2NNOtOCnZQbx-V5sOr4C9VhcbrrO5Dy46Jtz06z1afD4cEqATJLfDCzq4Kl4h6grokQ6ZZSqPr62UJFCvdS4WM6papcKywiYzy88xB0JlOfKRWkW1n-D2zS_QX-ZHNi7w4ivlx_wLQL3Mp9e2b3SFPSY9Yu4-Pw.H3xTG457HXrf5VBBTQUF9ePPZh3uMtqgVByY9c6Qwkg&dib_tag=se&keywords=yellow+shirts+for+men&qid=1710652660&sprefix=yelloshirts+for+men%2Caps%2C271&sr=8-27">
+                        <img src="https://m.media-amazon.com/images/I/511zO6yrqvS._SX569_.jpg" alt="Product 1">
+            </a>
+                        <h3>Product 5</h3>
+                        <p>Price: $100</p>
+                    </div>
+                 <div class="card">
+                    <a href="https://www.amazon.in/CB-COLEBROOK-Regular-Spread-Collar-XX-Large/dp/B0CQC2ZR63/ref=sr_1_41?crid=3NE03KAWCAHVY&dib=eyJ2IjoiMSJ9.ceOLjuq8zUzwUqWD_fbUwPuBaVe9lMqCPbfh-5hJnkYu0M-xXvrZ6roF28qD17nAcLxxq4reETbzC2pKUiyfJV8WZnzp-7KeEUTUNDiWZEIIAQkkLxPlpKZc75g9SGxepT8RqnStXB9B2NNOtOCnZQbx-V5sOr4C9VhcbrrO5Dy46Jtz06z1afD4cEqATJLfDCzq4Kl4h6grokQ6ZZSqPr62UJFCvdS4WM6papcKywiYzy88xB0JlOfKRWkW1n-D2zS_QX-ZHNi7w4ivlx_wLQL3Mp9e2b3SFPSY9Yu4-Pw.H3xTG457HXrf5VBBTQUF9ePPZh3uMtqgVByY9c6Qwkg&dib_tag=se&keywords=yellow+shirts+for+men&qid=1710652660&sprefix=yelloshirts+for+men%2Caps%2C271&sr=8-41">
+              <img src="https://m.media-amazon.com/images/I/51N+NhdLzNL._SX679_.jpg">
+            </a> <h3>Product 6</h3>
+                        <p>Price: $100</p>
+                 </div>
+            
+            <div class="card">
+                <a href="https://www.amazon.in/Allen-Solly-Regular-Shirt-ALSFVCUFZ01198_Yellow/dp/B0CJJ5STSP/ref=sr_1_52?crid=3NE03KAWCAHVY&dib=eyJ2IjoiMSJ9.q7MzIqVm60vLiQsqP7JcwJpNpP6U5WVZGEFL8orFmeDgSr3hfJWzqOrmgzuIhVqIg1IzyPsLQ9QudtOzGJWpLbF2VeVO6zebJ8utQwr_D8LX07h-nW48deYe27meuZWqwAzhIhKpIpImhEH6OskGFC1DvfYB_VXOi-0EVmolcUdwId4iBPBloH0tenGl3gSIbV59Yb0JP-gLMzzjufZriZw8Y2r-Dtmkx4rRW8-fnMaHFcGZIDiajG26fVb4v_RED56ljQdPpG2GPobxRTSGBx7E8m2N3e6g67orcZ8yL3s.WzJyFxAfxBLMYpC1BO_t0pW57mtBiC5c59-0cinacMI&dib_tag=se&keywords=yellow+shirts+for+men&qid=1710654009&sprefix=yelloshirts+for+men%2Caps%2C271&sr=8-52">
+              <img src="https://m.media-amazon.com/images/I/61IetdS7OoL._SY741_.jpg">
+            </a> <h3>Product 1</h3>
+                        <p>Price: $100</p>
+                 </div>
+            
+            <div class="card">
+                <a href="https://www.amazon.in/RAMRAJ-COTTON-Mustard-Yellow-Sleeve/dp/B0CJYFHSR9/ref=sr_1_247?crid=3VB378KTR08CA&dib=eyJ2IjoiMSJ9.aacZnBpDG1YIpSE43JVp13l3h5CF7a9MJb5BDKf1JyLrpWsl8VMuTqNvi6A179Y_cxP92KE48dQsnFxHPzlbQG8gaAvVzNqtDrd7F-DcwttIfYdxZSIa7FU0mvz1kB-YZmcBIDnAe0Fnx7ZinyGjNZMEbe8QDoIH2Q-TIdZqfQjSpAXLDcvGo11XYyel_b5CFJJkQsMbKNNsZUloccOwUOQ3gy52Cq4ufYmslcQr9y92eW-E8NVL7MFYI6plse_AJTRnCgCaQ4HbugXJ-yYs-zwm73XOkH-TwdfGjVSLQhk.NqvPkMhV5cAj0qEWoZ-yZmZdG5NOkRdwmXSmzUC2ceE&dib_tag=se&keywords=yellow+shirts+for+men&qid=1710654196&sprefix=%2Caps%2C412&sr=8-247">
+              <img src="https://m.media-amazon.com/images/I/610rPUMUYIL._SX679_.jpg" >
+            </a><h3>Product 8</h3>
+                        <p>Price: $1</p>
+                 </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end project section -->
+
+      <!--  footer -->
+      <footer>
+         <div class="footer">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-3">
+                     <div class="inror_box">
+                        <h3>INFORMATION </h3>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable</p>
+                     </div>
+                  </div>
+                  <div class="col-md-3">
+                     <div class="inror_box">
+                        <h3>MY ACCOUNT </h3>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable</p>
+                     </div>
+                  </div>
+                  <div class="col-md-3">
+                     <div class="inror_box">
+                        <h3>ABOUT  </h3>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable</p>
+                     </div>
+                  </div>
+                  <div class="col-md-3">
+                     <div class="inror_box">
+                        <h3>CONTACTS  </h3>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <p>© 2024 All Rights Reserved. Design by Amigos</a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- end footer -->
+      <!-- Javascript files-->
+      <script src="./static/js/jquery.min.js"></script>
+      <script src="./static/js/popper.min.js"></script>
+      <script src="./static/js/bootstrap.bundle.min.js"></script>
+      <script src="./static/js/jquery-3.0.0.min.js"></script>
+      <!-- sidebar -->
+      <script src="./static/js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="./static/js/custom.js"></script>
+   </body>
+</html>
+<script>
+   // Calculate the height of three pages
+   const threePagesHeight = window.innerHeight * 3;
+   function navigate() {
+       var fileName = document.getElementById('srch').value.trim();
+   
+       // Check if the input is not empty
+       if (fileName !== '') {
+           // Navigate to the HTML file
+           window.location.href = fileName;
+       } else {
+           // Alert user if the input is empty
+           alert("Please enter a file name");
+       }
+   }
+   // Create the scroll effect
+   // Get the input field
+       var input = document.getElementById("srch");
+
+       // Execute a function when the user presses a key on the keyboard
+       input.addEventListener("keypress", function(event) {
+       // If the user presses the "Enter" key on the keyboard
+       if (event.key === "Enter") {
+           // Cancel the default action, if needed
+           event.preventDefault();
+           // Trigger the button element with a click
+           document.getElementById("forsearch").click();
+       }
+       });
+   function scrollThreePages(direction) {
+       const currentPosition = window.pageYOffset;
+       const targetPosition = direction === 'up' ? currentPosition - threePagesHeight : currentPosition + threePagesHeight;
+
+       const scrollAnimation = window.requestAnimationFrame(() => {
+           window.scrollTo(0, targetPosition);
+           if (window.pageYOffset === targetPosition) {
+               window.cancelAnimationFrame(scrollAnimation);
+           } else {
+               scrollThreePages(direction);
+           }
+       });
+   }
+
+   // Add event listeners for scrolling up and down
+   document.addEventListener('keydown', (event) => {
+       if (event.key === 'ArrowUp') {
+           scrollThreePages('up');
+       } else if (event.key === 'ArrowDown') {
+           scrollThreePages('down');
+       }
+   });
+
+   document.querySelector('.up-arrow').addEventListener('click', () => {
+       scrollThreePages('up');
+   });
+
+   document.querySelector('.down-arrow').addEventListener('click', () => {
+       scrollThreePages('down');
+   });
+
+   function cameraIconClicked() {
+       
+       window.location.href = 'camera.html';
+   }
+
+   
+   document.getElementById('cameraIcon').addEventListener('click', cameraIconClicked);
+</script>

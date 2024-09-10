@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+    <!-- site metas -->
+    <title>romofyi</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="./static/css/bootstrap.min.css" />
+    <!-- style css -->
+    <link rel="stylesheet" href="./static/css/style.css" />
+    <!-- Responsive-->
+    <link rel="stylesheet" href="./static/css/responsive.css" />
+    <!-- fevicon -->
+    <link rel="icon" href="./static/images/fevicon.png" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="./static/css/jquery.mCustomScrollbar.min.css" />
+    <!-- Tweaks for older IEs-->
+    <link
+      rel="stylesheet"
+      href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+      media="screen"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script
+    ><![endif]-->
+
+    <style>
+      /*body {
+             background-color:pink;
+             font-family: Arial, sans-serif;
+             margin: 0;
+             padding: 0;
+         }
+         .container {
+             width: 100%;
+             margin: 0 auto;
+             padding: 20px;
+         }*/
+      .product_main .card {
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 0.25rem;
+        padding: 20px;
+        margin-bottom: 20px;
+        display: inline-block;
+        width: 200px;
+        text-align: center;
+      }
+
+      .product_main .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: contain;
+      }
+
+      .product_main .card h3 {
+        margin: 10px 0;
+      }
+
+      .product_main .card p {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <!-- body -->
+
+  <body class="main-layout">
+    <!-- loader  -->
+    <div class="loader_bg">
+      <div class="loader"><img src="./static/images/loading.gif" alt="#" /></div>
+    </div>
+    <!-- end loader -->
+    <!-- header -->
+    <header>
+      <!-- header inner -->
+      <div class="header">
+        <!-- <div class="header_top d_none1">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-4">
+                        <ul class="conta_icon ">
+                           <li><a href="#"><img src="./static/images/call.png" alt="#"/>Call us: 0126 - 922 - 0162</a> </li>
+                        </ul>
+                     </div>
+                     <div class="col-md-4">
+                        <ul class="social_icon">
+                           <li> <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i>
+                              </a>
+                           </li>
+                           <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
+                           <li> <a href="#"> <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                           <li> <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i>
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="se_fonr1">
+                           <form action="#" >
+                              <div class="select-box">
+                                 <label for="select-box1" class="label select-box1"><span class="label-desc">English</span> </label>
+                                 <select id="select-box1" class="select">
+                                    <option value="Choice 1">English</option>
+                                    <option value="Choice 1">Falkla</option>
+                                    <option value="Choice 2">Germa</option>
+                                    <option value="Choice 3">Neverl</option>
+                                 </select>
+                              </div>
+                           </form>
+                           <span class="time_o"> Open hour: 8.00 - 18.00</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div> -->
+        <div class="header_midil">
+          <div class="container">
+            <div class="row d_flex">
+              <div class="col-md-4">
+                <ul class="conta_icon d_none1">
+                  <li>
+                    <a href="#"
+                      ><img src="./static/images/email.png" alt="#" />amigos@gmail.com</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <a class="logo" href="#" style="height: 40px;"><img style="height: 40px;" src="https://i.ibb.co/ZNfr3Hk/logo.jpg" alt="#"/></a>
+              </div>
+              <div class="col-md-4">
+                <ul class="right_icon d_none1">
+                  <li>
+                    <a href="#"><img src="./static/images/shopping.png" alt="#" /></a>
+                  </li>
+                  <a href="#" class="order">Order Now</a>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header_bottom">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                <nav class="navigation navbar navbar-expand-md navbar-dark">
+                  <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarsExample04"
+                    aria-controls="navbarsExample04"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                  >
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarsExample04">
+                    <ul class="navbar-nav mr-auto">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="/">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="about">About</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="products">Products</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="fashion">Fashion</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="news">News</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="contact">Contact</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="upload">Upload</a>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+              <div class="col-md-3">
+                <div class="search">
+                  <input
+                    class="form_sea"
+                    type="text"
+                    placeholder="Search"
+                    id="srch"
+                    name="search"
+                  />
+                  <button
+                    type="submit"
+                    id="forsearch"
+                    onclick="navigate()"
+                    class="seach_icon"
+                  >
+                    <i class="fa fa-search"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- end header inner -->
+    <!-- end header -->
+
+    <!-- project section -->
+    <div id="project" class="project">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="titlepage">
+              <h2>Fashion Recommendation System</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="product_main">
+            <div class="card">
+              <a
+                href="https://www.amazon.in/TRENDMALLS-Womens-Embroidered-Unstitched-Designer/dp/B0CRYR4FFK/ref=sr_1_16?crid=3AUI9XJT7SXYW&dib=eyJ2IjoiMSJ9.uPpbRKr1aPde0v4A3wz3cbYXf54X8D2hQ5ll2YGH5eR3cZcDpdZzaYHiS0mV_ZPHaY4UI2Jw00d0VOUOAUid-_ZKqQi1ay0_NYyvQBPU5NIwkuJn5q1lv0bGmp_cg6GqKKHrpAtm2pOXmsAraBvblfn4YF0z_Zeo5R03gxmamYrrN3QKXH9JL3QeDtBteHmRbVqOGQeP7lj9XgJ6rsiE09O6d5QimppIBJi5lw7qHAjtKNu7hMU0TM49ILsnfmCT9uaNvYK1vBC5CvmXEmJBjY0lgiXqwwwkaNXGU6aMBBA.PoQLSUtTDbr7tpCoL9ehIh96vxjvyilAXuAezOQ3i9A&dib_tag=se&keywords=sarees&qid=1710680695&sprefix=%2Caps%2C439&sr=8-16
+                    
+                    "
+              >
+                <img
+                  src="https://m.media-amazon.com/images/I/710aLeQAK0L._SY879_.jpg"
+                  alt="Product 1"
+                />
+              </a>
+              <h3>pink saree</h3>
+              <p>Price: $10</p>
+            </div>
+            <div class="card">
+              <a
+                href="https://www.amazon.in/SIRIL-Womens-Printed-Chiffon-2206S934_Blue/dp/B09QHYYXZ7/ref=sr_1_34?crid=3AUI9XJT7SXYW&dib=eyJ2IjoiMSJ9.uPpbRKr1aPde0v4A3wz3cbYXf54X8D2hQ5ll2YGH5eR3cZcDpdZzaYHiS0mV_ZPHaY4UI2Jw00d0VOUOAUid-_ZKqQi1ay0_NYyvQBPU5NIwkuJn5q1lv0bGmp_cg6GqKKHrpAtm2pOXmsAraBvblfn4YF0z_Zeo5R03gxmamYrrN3QKXH9JL3QeDtBteHmRbVqOGQeP7lj9XgJ6rsiE09O6d5QimppIBJi5lw7qHAjtKNu7hMU0TM49ILsnfmCT9uaNvYK1vBC5CvmXEmJBjY0lgiXqwwwkaNXGU6aMBBA.PoQLSUtTDbr7tpCoL9ehIh96vxjvyilAXuAezOQ3i9A&dib_tag=se&keywords=sarees&qid=1710680695&sprefix=%2Caps%2C439&sr=8-34">
+                <img
+                  src="
+                      https://m.media-amazon.com/images/I/51IaxULpdxL.jpg"
+                  alt="product 2"
+                />
+              </a>
+              <h3>Blue Saree</h3>
+              <p>Price: $15</p>
+            </div>
+            <div class="card">
+              <a
+                href="https://www.amazon.in/SGF11-Womens-Kanjivaram-Cotton-Lavender/dp/B0C9CGBMRR/ref=sr_1_47?crid=3AUI9XJT7SXYW&dib=eyJ2IjoiMSJ9.uPpbRKr1aPde0v4A3wz3cbYXf54X8D2hQ5ll2YGH5eR3cZcDpdZzaYHiS0mV_ZPHaY4UI2Jw00d0VOUOAUid-_ZKqQi1ay0_NYyvQBPU5NIwkuJn5q1lv0bGmp_cg6GqKKHrpAtm2pOXmsAraBvblfn4YF0z_Zeo5R03gxmamYrrN3QKXH9JL3QeDtBteHmRbVqOGQeP7lj9XgJ6rsiE09O6d5QimppIBJi5lw7qHAjtKNu7hMU0TM49ILsnfmCT9uaNvYK1vBC5CvmXEmJBjY0lgiXqwwwkaNXGU6aMBBA.PoQLSUtTDbr7tpCoL9ehIh96vxjvyilAXuAezOQ3i9A&dib_tag=se&keywords=sarees&qid=1710680695&sprefix=%2Caps%2C439&sr=8-47"
+              >
+                <img
+                  src="https://m.media-amazon.com/images/I/51cckrJyXpL._SX569_.jpg"
+                  alt="Product 3"
+                />
+              </a>
+              <h3>Purple saree</h3>
+              <p>Price: $17</p>
+            </div>
+
+            <div class="card">
+              <a
+                href="https://www.amazon.in/MIRCHI-FASHION-Womens-Georgette-40171-Black/dp/B0CM9HT3FP/ref=sr_1_57?crid=3AUI9XJT7SXYW&dib=eyJ2IjoiMSJ9.NHMqcCkdz9dO8vyi_ntHgSVfkxfhmn5KbewZY0Q4WIshDNEXWdgpuYtVHSoFgoOydeXEoX5n0PTtxtiTmVkw863Pew1T4laTHxuvQskEqvk.w1U0GEODJChpUkSlzCG5cq8ujiAkb8oGyP0Nobp0fCs&dib_tag=se&keywords=sarees&qid=1710681388&sprefix=%2Caps%2C439&sr=8-57
+                             "
+              >
+                <img
+                  src="https://m.media-amazon.com/images/I/816Hcjs2zsL._SY741_.jpg
+                      "
+                  alt="Product 4"
+                />
+              </a>
+
+              <h3>Black saree</h3>
+              <p>Price: $15</p>
+            </div>
+
+            <div class="card">
+              <a
+                href="https://www.amazon.in/SIRIL-Womens-Chiffon-Unstitched-3397S248_Navy/dp/B0CRH8ZJKW/ref=sr_1_54?crid=3AUI9XJT7SXYW&dib=eyJ2IjoiMSJ9.hiR0yw0Cmc_rY1D-bBxLVI9Ujut4PfsZlqq8289oBTf_PUh7ZM8hQoKb6UvQUf0qMTjNvPz29vFqljFZX-95CCvDv-C8qmtA8sJx3p5YICP2NumTn-xXH8uywN_sC36VQkCtw6B2e-WHvCY9fNRcA6sptz5eOubScqknrkcGVW3SXUtXSlm6ISARQg72rDVIi_hNMb9lIk4LOkZZxq-Ia02na0Zti-fOiJLYA3jrfO4c-TyS2aQ5JqVX3ks61sirU_mL4sSty_xrnlF8xh4aQlAmNox_x56tai9j1EJWZbI.7hJs3JkDvpPYFueQhE0rfNb0fjPfvhKcU-lqbvjW4ig&dib_tag=se&keywords=sarees&qid=1710681388&sprefix=%2Caps%2C439&sr=8-54
+                       "
+              >
+                <img
+                  src="https://m.media-amazon.com/images/I/71SPqC-5+8L._SX569_.jpg"
+                  alt="Product 5"
+                />
+              </a>
+              <h3>Dark</h3>
+              <p>Price: $14</p>
+            </div>
+            <div class="card">
+              <a
+                href="https://www.flipkart.com/rhey-printed-bollywood-chiffon-saree/p/itmf4f832ae06ca4?pid=SARGFFRPCHBDDXWB&lid=LSTSARGFFRPCHBDDXWBGJJQVC&marketplace=FLIPKART&store=clo%2F8on%2Fzpd%2F9og&srno=b_1_37&otracker=browse&fm=search-autosuggest&iid=en_mdlSPj7EGbVy-NAIKdzsR7_jkRESaEA84MiV2nJJCEh3UIeGRNcLk2TQyb7HJvmdy0hpRWeQUNh8Fpo9WiXz8A%3D%3D&ppt=browse&ppn=browse&ssid=vjoc04co9s0000001710681853997
+                            "
+              >
+                <img
+                  src="https://rukminim2.flixcart.com/image/832/832/xif0q/sari/o/k/u/-original-imagv2zmgzt6kgak.jpeg?q=70&crop=false" alt="Product 6"
+                />
+              </a>
+              <h3>Navy Blue</h3>
+              <p>Price: $10</p>
+            </div>
+            
+
+
+        <!-- -->
+        <div class="card">
+            <a href="https://www.amazon.in/SWORNOF-Womens-Cotton-Blouse-SWO8888_Navy/dp/B08JMCFWZ3/ref=sr_1_2_sspa?crid=FNHCY2CTGV4L&dib=eyJ2IjoiMSJ9.KAWvsrbynXJXdSAjRTEO4tN0e2ETDemyJfz46IwqAc5mDAwFiiDygcYyDh12MSBRTMRZkQwi4haXGcO11wk_dY7uI0rqSMzlaC-wkeyvD4eNKaoVpHHSnKgYTwtzSf2JNH26NfwU5UmJvEt_sR1gSgE7BgByb1dXreO-jxxj0S0kxnenKsQucw-pMB5BCsAyhuASxuzUSv6H7__mQ0XiQvpDMuRgNeQzccDP751Q3lSQbuIzYLRP9ojZvs6QxYfv1kR7A2lx9N0-YmfsTMLJzwn9NeT0ISnf7TLYdYcQjMQ.A8gxltMpH4VKc_pIDPfkbClUigSkeqOWc-RuICWCU1k&dib_tag=se&keywords=sarees&qid=1710741908&sprefix=sarees%2Caps%2C519&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1">
+                <img src="https://m.media-amazon.com/images/I/816siql5M5L._SY879_.jpg" alt="Product 1">
+            </a>
+            <h3>Black saree</h3>
+            <p>Price: $25</p>
+        </div>
+
+        <div class="card">
+            <a href="https://amzn.to/3TCsMsC">
+                <img src="https://m.media-amazon.com/images/I/41uF1XPtd0L.jpg" alt="Product 1">
+            </a>
+            <h3>blue saree</h3>
+            <p>Price: $1</p>
+        </div>
+
+        <div class="card">
+            <a href="https://amzn.to/3v5ubP7">
+                <img src="https://m.media-amazon.com/images/I/81JEy-7-UJL._SY879_.jpg" alt="Product 1">
+            </a>
+            <h3>Green</h3>
+            <p>Price: $10</p>
+        </div>
+
+        <div class="card">
+            <a href="https://amzn.to/3IIzreo">
+                <img src="https://m.media-amazon.com/images/I/610p2+2mqQL._SX569_.jpg" alt="Product 1">
+            </a>
+            <h3>Blue saree</h3>
+            <p>Price: $10</p>
+        </div>
+
+        <div class="card">
+            <a href="https://amzn.to/49Wevwv">
+                <img src="https://m.media-amazon.com/images/I/719Ii9yIyZL._SX569_.jpg" alt="Product 1">
+            </a>
+            <h3>peach saree</h3>
+            <p>Price: $15</p>
+        </div>
+
+        <div class="card">
+            <a href="https://amzn.to/3Pph3eh">
+                <img src="https://m.media-amazon.com/images/I/81kw4Y0pfQL._SY741_.jpg" alt="Product 1">
+            </a>
+            <h3>red</h3>
+            <p>Price: $1</p>
+        </div>
+
+        <div class="card">
+            <a href="https://amzn.to/43oh3kB">
+                <img src="https://m.media-amazon.com/images/I/71pF20TpqoS._SY550_.jpg" alt="Product 1">
+            </a>
+            <h3>maroon saree</h3>
+            <p>Price: $10</p>
+        </div>
+
+        <div class="card">
+            <a href="https://amzn.to/4ach2lY">
+                <img src="https://m.media-amazon.com/images/I/71L7l+xbkmL._SY679_.jpg" alt="Product 1">
+            </a>
+            <h3>White</h3>
+            <p>Price: $10</p>
+        </div>
+
+        <div class="card">
+            <a href="https://amzn.to/3TG1zFx">
+                <img src="https://m.media-amazon.com/images/I/41+AyrLDN5L._SY500_.jpg" alt="Product 1">
+            </a>
+            <h3>Black</h3>
+            <p>Price: $10</p>
+        </div>
+       
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end project section -->
+
+    <!--  footer -->
+    <footer>
+      <div class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="inror_box">
+                <h3>INFORMATION</h3>
+                <p>
+                  There are many variations of passages of Lorem Ipsum
+                  available, but the majority have suffered alteration in some
+                  form, by injected humour, or randomised words which don't look
+                  even slightly believable
+                </p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="inror_box">
+                <h3>MY ACCOUNT</h3>
+                <p>
+                  There are many variations of passages of Lorem Ipsum
+                  available, but the majority have suffered alteration in some
+                  form, by injected humour, or randomised words which don't look
+                  even slightly believable
+                </p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="inror_box">
+                <h3>ABOUT</h3>
+                <p>
+                  There are many variations of passages of Lorem Ipsum
+                  available, but the majority have suffered alteration in some
+                  form, by injected humour, or randomised words which don't look
+                  even slightly believable
+                </p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="inror_box">
+                <h3>CONTACTS</h3>
+                <p>
+                  There are many variations of passages of Lorem Ipsum
+                  available, but the majority have suffered alteration in some
+                  form, by injected humour, or randomised words which don't look
+                  even slightly believable
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <p>
+                  © 2024 All Rights Reserved. Design by Amigos
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- end footer -->
+    <!-- Javascript files-->
+    <script src="./static/js/jquery.min.js"></script>
+    <script src="./static/js/popper.min.js"></script>
+    <script src="./static/js/bootstrap.bundle.min.js"></script>
+    <script src="./static/js/jquery-3.0.0.min.js"></script>
+    <!-- sidebar -->
+    <script src="./static/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="./static/js/custom.js"></script>
+  </body>
+</html>
+<script>
+  // Calculate the height of three pages
+  const threePagesHeight = window.innerHeight * 3;
+  function navigate() {
+    var fileName = document.getElementById("srch").value.trim();
+
+    // Check if the input is not empty
+    if (fileName !== "") {
+      // Navigate to the HTML file
+      window.location.href = fileName;
+    } else {
+      // Alert user if the input is empty
+      alert("Please enter a file name");
+    }
+  }
+  // Create the scroll effect
+  // Get the input field
+  var input = document.getElementById("srch");
+
+  // Execute a function when the user presses a key on the keyboard
+  input.addEventListener("keypress", function (event) {
+    // If the user presses the "Enter" key on the keyboard
+    if (event.key === "Enter") {
+      // Cancel the default action, if needed
+      event.preventDefault();
+      // Trigger the button element with a click
+      document.getElementById("forsearch").click();
+    }
+  });
+  function scrollThreePages(direction) {
+    const currentPosition = window.pageYOffset;
+    const targetPosition =
+      direction === "up"
+        ? currentPosition - threePagesHeight
+        : currentPosition + threePagesHeight;
+
+    const scrollAnimation = window.requestAnimationFrame(() => {
+      window.scrollTo(0, targetPosition);
+      if (window.pageYOffset === targetPosition) {
+        window.cancelAnimationFrame(scrollAnimation);
+      } else {
+        scrollThreePages(direction);
+      }
+    });
+  }
+
+  // Add event listeners for scrolling up and down
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowUp") {
+      scrollThreePages("up");
+    } else if (event.key === "ArrowDown") {
+      scrollThreePages("down");
+    }
+  });
+
+  document.querySelector(".up-arrow").addEventListener("click", () => {
+    scrollThreePages("up");
+  });
+
+  document.querySelector(".down-arrow").addEventListener("click", () => {
+    scrollThreePages("down");
+  });
+
+  function cameraIconClicked() {
+    window.location.href = "camera.html";
+  }
+
+  document
+    .getElementById("cameraIcon")
+    .addEventListener("click", cameraIconClicked);
+</script>

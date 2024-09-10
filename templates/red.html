@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+    <!-- site metas -->
+    <title>romofyi</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="./static/css/bootstrap.min.css" />
+    <!-- style css -->
+    <link rel="stylesheet" href="./static/css/style.css" />
+    <!-- Responsive-->
+    <link rel="stylesheet" href="./static/css/responsive.css" />
+    <!-- fevicon -->
+    <link rel="icon" href="./static/images/fevicon.png" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="./static/css/jquery.mCustomScrollbar.min.css" />
+    <!-- Tweaks for older IEs-->
+    <link
+      rel="stylesheet"
+      href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+      media="screen"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script
+    ><![endif]-->
+
+    <style>
+      /*body {
+             background-color:pink;
+             font-family: Arial, sans-serif;
+             margin: 0;
+             padding: 0;
+         }
+         .container {
+             width: 100%;
+             margin: 0 auto;
+             padding: 20px;
+         }*/
+      .product_main .card {
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 0.25rem;
+        padding: 20px;
+        margin-bottom: 20px;
+        display: inline-block;
+        width: 200px;
+        text-align: center;
+      }
+
+      .product_main .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: contain;
+      }
+
+      .product_main .card h3 {
+        margin: 10px 0;
+      }
+
+      .product_main .card p {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <!-- body -->
+
+  <body class="main-layout">
+    <!-- loader  -->
+    <div class="loader_bg">
+      <div class="loader"><img src="./static/images/loading.gif" alt="#" /></div>
+    </div>
+    <!-- end loader -->
+    <!-- header -->
+    <header>
+      <!-- header inner -->
+      <div class="header">
+        <!-- <div class="header_top d_none1">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-4">
+                        <ul class="conta_icon ">
+                           <li><a href="#"><img src="./static/images/call.png" alt="#"/>Call us: 0126 - 922 - 0162</a> </li>
+                        </ul>
+                     </div>
+                     <div class="col-md-4">
+                        <ul class="social_icon">
+                           <li> <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i>
+                              </a>
+                           </li>
+                           <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
+                           <li> <a href="#"> <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                           <li> <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i>
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="se_fonr1">
+                           <form action="#" >
+                              <div class="select-box">
+                                 <label for="select-box1" class="label select-box1"><span class="label-desc">English</span> </label>
+                                 <select id="select-box1" class="select">
+                                    <option value="Choice 1">English</option>
+                                    <option value="Choice 1">Falkla</option>
+                                    <option value="Choice 2">Germa</option>
+                                    <option value="Choice 3">Neverl</option>
+                                 </select>
+                              </div>
+                           </form>
+                           <span class="time_o"> Open hour: 8.00 - 18.00</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div> -->
+        <div class="header_midil">
+          <div class="container">
+            <div class="row d_flex">
+              <div class="col-md-4">
+                <ul class="conta_icon d_none1">
+                  <li>
+                    <a href="#"
+                      ><img src="./static/images/email.png" alt="#" />amigos@gmail.com</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <a class="logo" href="#" style="height: 40px;"><img style="height: 40px;" src="https://i.ibb.co/ZNfr3Hk/logo.jpg" alt="#"/></a>
+              </div>
+              <div class="col-md-4">
+                <ul class="right_icon d_none1">
+                  <li>
+                    <a href="#"><img src="./static/images/shopping.png" alt="#" /></a>
+                  </li>
+                  <a href="#" class="order">Order Now</a>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header_bottom">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                <nav class="navigation navbar navbar-expand-md navbar-dark">
+                  <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarsExample04"
+                    aria-controls="navbarsExample04"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                  >
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarsExample04">
+                    <ul class="navbar-nav mr-auto">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="/">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="about">About</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="products">Products</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="fashion">Fashion</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="news">News</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="contact">Contact</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="upload">Upload</a>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+              <div class="col-md-3">
+                <div class="search">
+                  <input
+                    class="form_sea"
+                    type="text"
+                    placeholder="Search"
+                    id="srch"
+                    name="search"
+                  />
+                  <button
+                    type="submit"
+                    id="forsearch"
+                    onclick="navigate()"
+                    class="seach_icon"
+                  >
+                    <i class="fa fa-search"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- end header inner -->
+    <!-- end header -->
+
+    <!-- project section -->
+    <div id="project" class="project">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="titlepage">
+              <h2>Fashion Recommendation System</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="product_main">
+            <div class="card">
+              <a
+                href="https://www.amazon.in/MARKRICH-Solid-Formal-Shirt-SS23MSHTFS047-XL_Red/dp/B0BYNVZK8H/ref=sr_1_2_sspa?crid=1P6LKZ99PDVM5&dib=eyJ2IjoiMSJ9.fCR4_UOk8_tc334CTCsuZKfrmFotQ1DyeCE7mEiFl4ZcDVZ98x50GgQY5OXeYG6FzkpggtplCisain2Rt-9snPRsXs7wLFBLuS3XPbr9NgkqlvT3B54mpdDQ6tt_KIMVuZcmzPeEcSfE39nUIycDiQ8Kb4xxwQdxE2avNcUCNMwqYKRu2bEdL-8Nz3CNCZwQlC18vShqpWMd4zzpczD0S2wdjY1oiz_q7sjPhmmoC3Np0upQJqfGvbQggCNT73xfxKmxjnIib6HXZOXBUbQX6vCyS9BHVgYulvdjUFLAKH0.AP8aMlU5e7vm40yMgkYC6ONoe1Zz0eGdmtlexUS2KTY&dib_tag=se&keywords=red+shirts+for+men&qid=1710655202&sprefix=red+shirts+for+men%2Caps%2C235&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"
+              >
+                <img
+                  src="https://m.media-amazon.com/images/I/51oTHCTAFXL._SX679_.jpg"
+                  alt="Product 1"
+                />
+              </a>
+              <h3>Product 1</h3>
+              <p>Price: $1</p>
+            </div>
+            <div class="card">
+              <a
+                href="https://www.amazon.in/YHA-Solid-Shirt-Men-Regular/dp/B09NC2STKY/ref=sr_1_5?crid=1P6LKZ99PDVM5&dib=eyJ2IjoiMSJ9.fCR4_UOk8_tc334CTCsuZKfrmFotQ1DyeCE7mEiFl4ZcDVZ98x50GgQY5OXeYG6FzkpggtplCisain2Rt-9snPRsXs7wLFBLuS3XPbr9NgkqlvT3B54mpdDQ6tt_KIMVuZcmzPeEcSfE39nUIycDiQ8Kb4xxwQdxE2avNcUCNMwqYKRu2bEdL-8Nz3CNCZwQlC18vShqpWMd4zzpczD0S2wdjY1oiz_q7sjPhmmoC3Np0upQJqfGvbQggCNT73xfxKmxjnIib6HXZOXBUbQX6vCyS9BHVgYulvdjUFLAKH0.AP8aMlU5e7vm40yMgkYC6ONoe1Zz0eGdmtlexUS2KTY&dib_tag=se&keywords=red+shirts+for+men&qid=1710655202&sprefix=red+shirts+for+men%2Caps%2C235&sr=8-5"
+              >
+                <img
+                  src="https://m.media-amazon.com/images/I/71We74Rpz3L._SY741_.jpg"
+                  alt="product 1"
+                />
+              </a>
+              <h3>Product 2</h3>
+              <p>Price: $150</p>
+            </div>
+            <div class="card">
+              <a
+                href="https://www.amazon.in/JEEVAAN-PERFECT-FASHION-Regular-X-Large/dp/B0B5HKPPVT/ref=sr_1_10?crid=1P6LKZ99PDVM5&dib=eyJ2IjoiMSJ9.fCR4_UOk8_tc334CTCsuZKfrmFotQ1DyeCE7mEiFl4ZcDVZ98x50GgQY5OXeYG6FzkpggtplCisain2Rt-9snPRsXs7wLFBLuS3XPbr9NgkqlvT3B54mpdDQ6tt_KIMVuZcmzPeEcSfE39nUIycDiQ8Kb4xxwQdxE2avNcUCNMwqYKRu2bEdL-8Nz3CNCZwQlC18vShqpWMd4zzpczD0S2wdjY1oiz_q7sjPhmmoC3Np0upQJqfGvbQggCNT73xfxKmxjnIib6HXZOXBUbQX6vCyS9BHVgYulvdjUFLAKH0.AP8aMlU5e7vm40yMgkYC6ONoe1Zz0eGdmtlexUS2KTY&dib_tag=se&keywords=red+shirts+for+men&qid=1710655202&sprefix=red+shirts+for+men%2Caps%2C235&sr=8-10"
+              >
+                <img
+                  src="https://m.media-amazon.com/images/I/71iwYW3I5AL._SY741_.jpg"
+                  alt="Product 1"
+                />
+              </a>
+              <h3>Product 3</h3>
+              <p>Price: $100</p>
+            </div>
+
+            <div class="card">
+              <a
+                href="https://www.amazon.in/Zombom-Classic-Casual-ZBBUTTON-PATTI_554_Red_38_Red_38/dp/B08HWMVG8W/ref=sr_1_12?crid=1P6LKZ99PDVM5&dib=eyJ2IjoiMSJ9.fCR4_UOk8_tc334CTCsuZKfrmFotQ1DyeCE7mEiFl4ZcDVZ98x50GgQY5OXeYG6FzkpggtplCisain2Rt-9snPRsXs7wLFBLuS3XPbr9NgkqlvT3B54mpdDQ6tt_KIMVuZcmzPeEcSfE39nUIycDiQ8Kb4xxwQdxE2avNcUCNMwqYKRu2bEdL-8Nz3CNCZwQlC18vShqpWMd4zzpczD0S2wdjY1oiz_q7sjPhmmoC3Np0upQJqfGvbQggCNT73xfxKmxjnIib6HXZOXBUbQX6vCyS9BHVgYulvdjUFLAKH0.AP8aMlU5e7vm40yMgkYC6ONoe1Zz0eGdmtlexUS2KTY&dib_tag=se&keywords=red+shirts+for+men&qid=1710655202&sprefix=red+shirts+for+men%2Caps%2C235&sr=8-12"
+              >
+                <img
+                  src="https://m.media-amazon.com/images/I/51MK6D6V48L._SX679_.jpg"
+                  alt="Product 1"
+                />
+              </a>
+
+              <h3>Product 4</h3>
+              <p>Price: $100</p>
+            </div>
+
+            <div class="card">
+              <a
+                href="https://www.amazon.in/Amazon-Brand-Symbol-Regular-AZ-SY-RR-12A-04_Maroon_Medium/dp/B07KXB5G28/ref=sr_1_19?crid=1P6LKZ99PDVM5&dib=eyJ2IjoiMSJ9.fCR4_UOk8_tc334CTCsuZKfrmFotQ1DyeCE7mEiFl4ZcDVZ98x50GgQY5OXeYG6FzkpggtplCisain2Rt-9snPRsXs7wLFBLuS3XPbr9NgkqlvT3B54mpdDQ6tt_KIMVuZcmzPeEcSfE39nUIycDiQ8Kb4xxwQdxE2avNcUCNMwqYKRu2bEdL-8Nz3CNCZwQlC18vShqpWMd4zzpczD0S2wdjY1oiz_q7sjPhmmoC3Np0upQJqfGvbQggCNT73xfxKmxjnIib6HXZOXBUbQX6vCyS9BHVgYulvdjUFLAKH0.AP8aMlU5e7vm40yMgkYC6ONoe1Zz0eGdmtlexUS2KTY&dib_tag=se&keywords=red+shirts+for+men&qid=1710655202&sprefix=red+shirts+for+men%2Caps%2C235&sr=8-19"
+              >
+                <img
+                  src="https://m.media-amazon.com/images/I/71xigIyC1EL._SX569_.jpg"
+                  alt="Product 1"
+                />
+              </a>
+              <h3>Product 5</h3>
+              <p>Price: $100</p>
+            </div>
+            <div class="card">
+              <a
+                href="https://www.amazon.in/Peter-England-Mens-Shirt-PCSFSSLPR62181_Red/dp/B0BKQ8VK59/ref=sr_1_20?crid=1P6LKZ99PDVM5&dib=eyJ2IjoiMSJ9.fCR4_UOk8_tc334CTCsuZKfrmFotQ1DyeCE7mEiFl4ZcDVZ98x50GgQY5OXeYG6FzkpggtplCisain2Rt-9snPRsXs7wLFBLuS3XPbr9NgkqlvT3B54mpdDQ6tt_KIMVuZcmzPeEcSfE39nUIycDiQ8Kb4xxwQdxE2avNcUCNMwqYKRu2bEdL-8Nz3CNCZwQlC18vShqpWMd4zzpczD0S2wdjY1oiz_q7sjPhmmoC3Np0upQJqfGvbQggCNT73xfxKmxjnIib6HXZOXBUbQX6vCyS9BHVgYulvdjUFLAKH0.AP8aMlU5e7vm40yMgkYC6ONoe1Zz0eGdmtlexUS2KTY&dib_tag=se&keywords=red+shirts+for+men&qid=1710655202&sprefix=red+shirts+for+men%2Caps%2C235&sr=8-20"
+              >
+                <img
+                  src="https://m.media-amazon.com/images/I/61GoJ+WtPPL._SY741_.jpg"
+                />
+              </a>
+              <h3>Product 6</h3>
+              <p>Price: $100</p>
+            </div>
+
+            <div class="card">
+              <a
+                href="https://www.amazon.in/Park-Avenue-Slim-Casual-Shirt/dp/B0BY95BQR9/ref=sr_1_31?crid=1P6LKZ99PDVM5&dib=eyJ2IjoiMSJ9.fCR4_UOk8_tc334CTCsuZKfrmFotQ1DyeCE7mEiFl4ZcDVZ98x50GgQY5OXeYG6FzkpggtplCisain2Rt-9snPRsXs7wLFBLuS3XPbr9NgkqlvT3B54mpdDQ6tt_KIMVuZcmzPeEcSfE39nUIycDiQ8Kb4xxwQdxE2avNcUCNMwqYKRu2bEdL-8Nz3CNCZwQlC18vShqpWMd4zzpczD0S2wdjY1oiz_q7sjPhmmoC3Np0upQJqfGvbQggCNT73xfxKmxjnIib6HXZOXBUbQX6vCyS9BHVgYulvdjUFLAKH0.AP8aMlU5e7vm40yMgkYC6ONoe1Zz0eGdmtlexUS2KTY&dib_tag=se&keywords=red+shirts+for+men&qid=1710655202&sprefix=red+shirts+for+men%2Caps%2C235&sr=8-31"
+              >
+                <img
+                  src="https://m.media-amazon.com/images/I/618AJdLDdmL._SX679_.jpg"
+                />
+              </a>
+              <h3>Product 1</h3>
+              <p>Price: $100</p>
+            </div>
+
+            <div class="card">
+              <a
+                href="https://www.amazon.in/Lee-Mens-Slim-Jeans-LMSH003304_Red/dp/B0BTD9QVV6/ref=sr_1_122?crid=1P6LKZ99PDVM5&dib=eyJ2IjoiMSJ9.mEaAPteGcBkEiayLYJAiw8H0jxPXl_SThSYrqst1FIsKdm9L9y1FlZpWWOMMH705rgkhb8Fr41wF7ytGBNAnagu5Zgyd4BHbc6WSpjGyj1bC4CnBzXiRCCNedeNKlLg9xYbEUX6pewF4e6sJf-nDwudzBf2Z5JVqS6hf6Y-4RFIeSpBcMpEYoLXP7ppNdrZxMKORBY6exgmvAwUMrWDq-EEUuit1mJJxtXeijFOWMu8_-pBFZA_pfyPb1bo7mB7zHKFP_2w2ffam1uRpvPgPx-zPGbqmLpAeg6DhaBlT38w.iPoHji9V2SEzshQj75HqVc3nIB3IW0_4yUZZLPQlGJ8&dib_tag=se&keywords=red+shirts+for+men&qid=1710655905&sprefix=red+shirts+for+men%2Caps%2C235&sr=8-122"
+              >
+                <img
+                  src="https://m.media-amazon.com/images/I/71VI59KS6EL._SX679_.jpg"
+                />
+              </a>
+              <h3>Product 8</h3>
+              <p>Price: $1</p>
+            </div>
+
+            <div class="card">
+              <a
+                href="https://www.amazon.in/MARKRICH-Solid-Formal-Shirt-SS23MSHTFS047-XL_Red/dp/B0BYNVZK8H/ref=sr_1_1_sspa?crid=8KNEQR0W069W&dib=eyJ2IjoiMSJ9.TNRtyyzKTkXOFjBl9XGsHShKl5YcJxXMndCjVuKikSHgkoJCd9LWMRkHOnoqzveFVSH9lKSjPP3TsE_vep24vp3oZM7bbd2YjxVy0fDmcvC9CaIawYoI5ZTnzcSXVDZ3AK_c83XgyVTtO6OOYRdCuBEuJQECEQVchGk2LOkZr6BiYmB9KL3md-p30ZDriGgQV0NUBbvp-AoKq4ff_W0-MFlX6TPaZuzEhY6HFshIYnRUE5hrW2IjORbsybCnYAzpVZNArblfbEK_foXHAaePPaae3F-k7jkgceeoK9s_dd8.2o2Nnj83c3EI9OXrpFxkrdK94i_Ny02_5ACQk_H74kg&dib_tag=se&keywords=red+shirts+for+men&qid=1710742044&sprefix=red+shirts+%2Caps%2C508&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"
+              >
+                <img
+                  src="https://m.media-amazon.com/images/I/51oTHCTAFXL._SX522_.jpg"
+                  alt="Product 1"
+                />
+              </a>
+              <h3>Product 1</h3>
+              <p>Price: $1</p>
+            </div>
+            <div class="card">
+              <a
+                href="https://www.amazon.in/Parx-Mens-Slim-Shirt-XMSJ12572-R8_Dark/dp/B0CD5MYW4W/ref=sr_1_4_sspa?crid=8KNEQR0W069W&dib=eyJ2IjoiMSJ9.TNRtyyzKTkXOFjBl9XGsHShKl5YcJxXMndCjVuKikSHgkoJCd9LWMRkHOnoqzveFVSH9lKSjPP3TsE_vep24vp3oZM7bbd2YjxVy0fDmcvC9CaIawYoI5ZTnzcSXVDZ3AK_c83XgyVTtO6OOYRdCuBEuJQECEQVchGk2LOkZr6BiYmB9KL3md-p30ZDriGgQV0NUBbvp-AoKq4ff_W0-MFlX6TPaZuzEhY6HFshIYnRUE5hrW2IjORbsybCnYAzpVZNArblfbEK_foXHAaePPaae3F-k7jkgceeoK9s_dd8.2o2Nnj83c3EI9OXrpFxkrdK94i_Ny02_5ACQk_H74kg&dib_tag=se&keywords=red+shirts+for+men&qid=1710742044&sprefix=red+shirts+%2Caps%2C508&sr=8-4-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"
+              >
+                <img
+                  src="https://m.media-amazon.com/images/I/71CPuJiAfNL._SX522_.jpg"
+                  alt="product 1"
+                />
+              </a>
+              <h3>Product 2</h3>
+              <p>Price: $150</p>
+            </div>
+            <div class="card">
+              <a
+                href="https://www.amazon.in/Zombom-Classic-Casual-ZBBUTTON-PATTI_554_Red_38_Red_38/dp/B08HWMVG8W/ref=sr_1_6?crid=8KNEQR0W069W&dib=eyJ2IjoiMSJ9.TNRtyyzKTkXOFjBl9XGsHShKl5YcJxXMndCjVuKikSHgkoJCd9LWMRkHOnoqzveFVSH9lKSjPP3TsE_vep24vp3oZM7bbd2YjxVy0fDmcvC9CaIawYoI5ZTnzcSXVDZ3AK_c83XgyVTtO6OOYRdCuBEuJQECEQVchGk2LOkZr6BiYmB9KL3md-p30ZDriGgQV0NUBbvp-AoKq4ff_W0-MFlX6TPaZuzEhY6HFshIYnRUE5hrW2IjORbsybCnYAzpVZNArblfbEK_foXHAaePPaae3F-k7jkgceeoK9s_dd8.2o2Nnj83c3EI9OXrpFxkrdK94i_Ny02_5ACQk_H74kg&dib_tag=se&keywords=red+shirts+for+men&qid=1710742044&sprefix=red+shirts+%2Caps%2C508&sr=8-6"
+              >
+                <img
+                  src="https://m.media-amazon.com/images/I/51MK6D6V48L._SX522_.jpg"
+                  alt="Product 1"
+                />
+              </a>
+              <h3>Product 3</h3>
+              <p>Price: $100</p>
+            </div>
+
+            <div class="card">
+              <a
+                href="https://www.amazon.in/Dennis-Lingo-Casual-Spread-XX-Large/dp/B0BC991FV8/ref=sr_1_13?crid=8KNEQR0W069W&dib=eyJ2IjoiMSJ9.TNRtyyzKTkXOFjBl9XGsHShKl5YcJxXMndCjVuKikSHgkoJCd9LWMRkHOnoqzveFVSH9lKSjPP3TsE_vep24vp3oZM7bbd2YjxVy0fDmcvC9CaIawYoI5ZTnzcSXVDZ3AK_c83XgyVTtO6OOYRdCuBEuJQECEQVchGk2LOkZr6BiYmB9KL3md-p30ZDriGgQV0NUBbvp-AoKq4ff_W0-MFlX6TPaZuzEhY6HFshIYnRUE5hrW2IjORbsybCnYAzpVZNArblfbEK_foXHAaePPaae3F-k7jkgceeoK9s_dd8.2o2Nnj83c3EI9OXrpFxkrdK94i_Ny02_5ACQk_H74kg&dib_tag=se&keywords=red+shirts+for+men&qid=1710742044&sprefix=red+shirts+%2Caps%2C508&sr=8-13"
+              >
+                <img
+                  src="https://m.media-amazon.com/images/I/61v3esXVtyL._SX522_.jpg"
+                  alt="Product 1"
+                />
+              </a>
+
+              <h3>Product 4</h3>
+              <p>Price: $100</p>
+            </div>
+
+            <div class="card">
+              <a
+                href="https://www.amazon.in/Indian-Garage-Co-Shirt-0619-SH03-03/dp/B087S5BHWN/ref=sr_1_17?crid=8KNEQR0W069W&dib=eyJ2IjoiMSJ9.TNRtyyzKTkXOFjBl9XGsHShKl5YcJxXMndCjVuKikSHgkoJCd9LWMRkHOnoqzveFVSH9lKSjPP3TsE_vep24vp3oZM7bbd2YjxVy0fDmcvC9CaIawYoI5ZTnzcSXVDZ3AK_c83XgyVTtO6OOYRdCuBEuJQECEQVchGk2LOkZr6BiYmB9KL3md-p30ZDriGgQV0NUBbvp-AoKq4ff_W0-MFlX6TPaZuzEhY6HFshIYnRUE5hrW2IjORbsybCnYAzpVZNArblfbEK_foXHAaePPaae3F-k7jkgceeoK9s_dd8.2o2Nnj83c3EI9OXrpFxkrdK94i_Ny02_5ACQk_H74kg&dib_tag=se&keywords=red+shirts+for+men&qid=1710742044&sprefix=red+shirts+%2Caps%2C508&sr=8-17"
+              >
+                <img
+                  src="https://m.media-amazon.com/images/I/81k0Cc7sG0L._SY550_.jpg"
+                  alt="Product 1"
+                />
+              </a>
+              <h3>Product 5</h3>
+              <p>Price: $100</p>
+            </div>
+            <div class="card">
+              <a
+                href="https://www.amazon.in/Campus-Sutra-Textured-High-Performance-Everyday/dp/B0C2H9TXXN/ref=sr_1_18?crid=8KNEQR0W069W&dib=eyJ2IjoiMSJ9.TNRtyyzKTkXOFjBl9XGsHShKl5YcJxXMndCjVuKikSHgkoJCd9LWMRkHOnoqzveFVSH9lKSjPP3TsE_vep24vp3oZM7bbd2YjxVy0fDmcvC9CaIawYoI5ZTnzcSXVDZ3AK_c83XgyVTtO6OOYRdCuBEuJQECEQVchGk2LOkZr6BiYmB9KL3md-p30ZDriGgQV0NUBbvp-AoKq4ff_W0-MFlX6TPaZuzEhY6HFshIYnRUE5hrW2IjORbsybCnYAzpVZNArblfbEK_foXHAaePPaae3F-k7jkgceeoK9s_dd8.2o2Nnj83c3EI9OXrpFxkrdK94i_Ny02_5ACQk_H74kg&dib_tag=se&keywords=red+shirts+for+men&qid=1710742044&sprefix=red+shirts+%2Caps%2C508&sr=8-18"
+              >
+                <img
+                  src="https://m.media-amazon.com/images/I/71ujJvq2CzL._SX522_.jpg"
+                />
+              </a>
+              <h3>Product 6</h3>
+              <p>Price: $100</p>
+            </div>
+
+            <div class="card">
+              <a
+                href="https://www.amazon.in/Men-Shirt-Casual-Atta-Patta/dp/B0CVNCRN6D/ref=sr_1_19?crid=8KNEQR0W069W&dib=eyJ2IjoiMSJ9.TNRtyyzKTkXOFjBl9XGsHShKl5YcJxXMndCjVuKikSHgkoJCd9LWMRkHOnoqzveFVSH9lKSjPP3TsE_vep24vp3oZM7bbd2YjxVy0fDmcvC9CaIawYoI5ZTnzcSXVDZ3AK_c83XgyVTtO6OOYRdCuBEuJQECEQVchGk2LOkZr6BiYmB9KL3md-p30ZDriGgQV0NUBbvp-AoKq4ff_W0-MFlX6TPaZuzEhY6HFshIYnRUE5hrW2IjORbsybCnYAzpVZNArblfbEK_foXHAaePPaae3F-k7jkgceeoK9s_dd8.2o2Nnj83c3EI9OXrpFxkrdK94i_Ny02_5ACQk_H74kg&dib_tag=se&keywords=red+shirts+for+men&qid=1710742044&sprefix=red+shirts+%2Caps%2C508&sr=8-19"
+              >
+                <img
+                  src="https://m.media-amazon.com/images/I/71qoQSfeyVL._SY550_.jpg"
+                />
+              </a>
+              <h3>Product 1</h3>
+              <p>Price: $100</p>
+            </div>
+
+            <div class="card">
+              <a
+                href="https://www.amazon.in/Amazon-Brand-Regular-T-Shirt-SS20INKTEE34-B_Red/dp/B081VK7YBW/ref=sr_1_1_sspa?crid=3FW81D1PFEGJG&dib=eyJ2IjoiMSJ9.PQ_Yogskr-BmhLiyyunr_LNZONAJOgwwpbRuevrngD7HHJm5DELUzOI43qF9MGtIVr06N4fOpFhnAxfY215N7aCZN-WMA_x1l4fib739jOmzWyZvsGQ5PUFt_GIE4bm_ywAD0KeSW75Kkss9oYgGL6D8jEOKgsh5LvHN-9F4UssxBDdJ9_pRaelvkv5FzkoMyirn0cHYYenfqNs_1_CJ-ECRe9xMOV67lYtmJeIsCDox74g9zTQ_XHefSxXZXkyBtSs_h3uucZBzLz1RMd3BwIu7IhPGdqp49uRr0adnj5A.txnFJ0egDyGahvTz0t70DVbkpzCZ8Sk8OV1VNUBPrC0&dib_tag=se&keywords=red+shirts+for+men&qid=1710742693&sprefix=red+shirts+for+men%2Caps%2C236&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"
+              >
+                <img
+                  src="https://m.media-amazon.com/images/I/71QVqG05Y2L._SY550_.jpg"
+                />
+              </a>
+              <h3>Product 8</h3>
+              <p>Price: $1</p>
+            </div>
+
+            <div class="card">
+              <a
+                href="https://www.amazon.in/Indian-Garage-Co-Geometric-1220-SHSTR71-03_Red/dp/B08ZNDS1KW/ref=sr_1_32?crid=1BKOZSU748ZJX&dib=eyJ2IjoiMSJ9.TNRtyyzKTkXOFjBl9XGsHShKl5YcJxXMndCjVuKikSHgkoJCd9LWMRkHOnoqzveFVSH9lKSjPP3TsE_vep24vp3oZM7bbd2YjxVy0fDmcvC9CaIawYoI5ZTnzcSXVDZ3AK_c83XgyVTtO6OOYRdCuBEuJQECEQVchGk2LOkZr6BiYmB9KL3md-p30ZDriGgQV0NUBbvp-AoKq4ff_W0-MFlX6TPaZuzEhY6HFshIYnRUE5hrW2IjORbsybCnYAzpVZNArblfbEK_foXHAaePPaae3F-k7jkgceeoK9s_dd8.2o2Nnj83c3EI9OXrpFxkrdK94i_Ny02_5ACQk_H74kg&dib_tag=se&keywords=red+shirts+for+men&qid=1710742882&sprefix=red+shirts+for+men%2Caps%2C703&sr=8-32"
+              >
+                <img
+                  src="https://m.media-amazon.com/images/I/81FE+xYArJL._SY550_.jpg"
+                  alt="Product 1"
+                />
+              </a>
+              <h3>Product 5</h3>
+              <p>Price: $100</p>
+            </div>
+
+            <div class="card">
+              <a
+                href="https://www.amazon.in/GRECIILOOKS-Casual-Polycotton-Regular-GL-MS-6131-XXL-Maroon/dp/B0CLZYGT29/ref=sr_1_35?crid=1BKOZSU748ZJX&dib=eyJ2IjoiMSJ9.TNRtyyzKTkXOFjBl9XGsHShKl5YcJxXMndCjVuKikSHgkoJCd9LWMRkHOnoqzveFVSH9lKSjPP3TsE_vep24vp3oZM7bbd2YjxVy0fDmcvC9CaIawYoI5ZTnzcSXVDZ3AK_c83XgyVTtO6OOYRdCuBEuJQECEQVchGk2LOkZr6BiYmB9KL3md-p30ZDriGgQV0NUBbvp-AoKq4ff_W0-MFlX6TPaZuzEhY6HFshIYnRUE5hrW2IjORbsybCnYAzpVZNArblfbEK_foXHAaePPaae3F-k7jkgceeoK9s_dd8.2o2Nnj83c3EI9OXrpFxkrdK94i_Ny02_5ACQk_H74kg&dib_tag=se&keywords=red+shirts+for+men&qid=1710742882&sprefix=red+shirts+for+men%2Caps%2C703&sr=8-35"
+              >
+                <img
+                  src="https://m.media-amazon.com/images/I/61htvtEJxzL._SY550_.jpg"
+                  alt="Product 1"
+                />
+              </a>
+              <h3>Product 5</h3>
+              <p>Price: $100</p>
+            </div>
+
+            <div class="card">
+              <a
+                href="https://www.amazon.in/Fruit-Loom-Regular-MPT01_Haute-Red_X-Large/dp/B07JMSH7B3/ref=sr_1_2_sspa?crid=3FW81D1PFEGJG&dib=eyJ2IjoiMSJ9.PQ_Yogskr-BmhLiyyunr_LNZONAJOgwwpbRuevrngD7HHJm5DELUzOI43qF9MGtIVr06N4fOpFhnAxfY215N7aCZN-WMA_x1l4fib739jOmzWyZvsGQ5PUFt_GIE4bm_ywAD0KeSW75Kkss9oYgGL6D8jEOKgsh5LvHN-9F4UssxBDdJ9_pRaelvkv5FzkoMyirn0cHYYenfqNs_1_CJ-ECRe9xMOV67lYtmJeIsCDox74g9zTQ_XHefSxXZXkyBtSs_h3uucZBzLz1RMd3BwIu7IhPGdqp49uRr0adnj5A.txnFJ0egDyGahvTz0t70DVbkpzCZ8Sk8OV1VNUBPrC0&dib_tag=se&keywords=red+shirts+for+men&qid=1710742693&sprefix=red+shirts+for+men%2Caps%2C236&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"
+              >
+                <img
+                  src="https://m.media-amazon.com/images/I/71+1FpMiLCL._SY550_.jpg"
+                  alt="Product 1"
+                />
+              </a>
+              <h3>Product 1</h3>
+              <p>Price: $1</p>
+            </div>
+            <div class="card">
+              <a
+                href="https://www.amazon.in/Majestic-Man-Printed-Casual-X-Large/dp/B0B11PRST1/ref=sxin_35_pa_sp_search_thematic_sspa?content-id=amzn1.sym.37bad8da-0499-4510-838e-af217f0a67c4%3Aamzn1.sym.37bad8da-0499-4510-838e-af217f0a67c4&crid=1BKOZSU748ZJX&cv_ct_cx=red+shirts+for+men&dib=eyJ2IjoiMSJ9.tUv5Vd2eE5f4SBUnJYtiL3t2vM2U5UpBKzMaJD-AT6UuIV_5QkKNaGARZ4rhBo8eueya7RMl6vleO_VGZDjSGQ.BOdCIbyFWUQLkPaXHyrrVHsz_nFcZNnmx-puQOLCxoI&dib_tag=se&keywords=red+shirts+for+men&pd_rd_i=B0B11PRST1&pd_rd_r=d8f0aa6f-190c-44ee-ae98-ce7a8c25cc67&pd_rd_w=oLCEC&pd_rd_wg=LescB&pf_rd_p=37bad8da-0499-4510-838e-af217f0a67c4&pf_rd_r=AQZBE4EFHRYHV6EDYMQS&qid=1710742882&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=red+shirts+for+men%2Caps%2C703&sr=1-1-ced4eeeb-b190-41d6-902a-1ecb3fb8b7c4-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&psc=1"
+              >
+                <img
+                  src="https://m.media-amazon.com/images/I/61TVj+0lQlL._SY550_.jpg"
+                  alt="product 1"
+                />
+              </a>
+              <h3>Product 2</h3>
+              <p>Price: $150</p>
+            </div>
+
+            <div class="card">
+              <a
+                href="https://www.amazon.in/Lymio-Casual-Shirt-Stylish-Printed/dp/B0BRKHKHTQ/ref=sr_1_38?crid=1BKOZSU748ZJX&dib=eyJ2IjoiMSJ9.TNRtyyzKTkXOFjBl9XGsHShKl5YcJxXMndCjVuKikSHgkoJCd9LWMRkHOnoqzveFVSH9lKSjPP3TsE_vep24vp3oZM7bbd2YjxVy0fDmcvC9CaIawYoI5ZTnzcSXVDZ3AK_c83XgyVTtO6OOYRdCuBEuJQECEQVchGk2LOkZr6BiYmB9KL3md-p30ZDriGgQV0NUBbvp-AoKq4ff_W0-MFlX6TPaZuzEhY6HFshIYnRUE5hrW2IjORbsybCnYAzpVZNArblfbEK_foXHAaePPaae3F-k7jkgceeoK9s_dd8.2o2Nnj83c3EI9OXrpFxkrdK94i_Ny02_5ACQk_H74kg&dib_tag=se&keywords=red+shirts+for+men&qid=1710742882&sprefix=red+shirts+for+men%2Caps%2C703&sr=8-38"
+              >
+                <img
+                  src="https://m.media-amazon.com/images/I/71ZGe3YWTVL._SY550_.jpg"
+                  alt="Product 1"
+                />
+              </a>
+              <h3>Product 5</h3>
+              <p>Price: $100</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end project section -->
+
+    <!--  footer -->
+    <footer>
+      <div class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="inror_box">
+                <h3>INFORMATION</h3>
+                <p>
+                  There are many variations of passages of Lorem Ipsum
+                  available, but the majority have suffered alteration in some
+                  form, by injected humour, or randomised words which don't look
+                  even slightly believable
+                </p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="inror_box">
+                <h3>MY ACCOUNT</h3>
+                <p>
+                  There are many variations of passages of Lorem Ipsum
+                  available, but the majority have suffered alteration in some
+                  form, by injected humour, or randomised words which don't look
+                  even slightly believable
+                </p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="inror_box">
+                <h3>ABOUT</h3>
+                <p>
+                  There are many variations of passages of Lorem Ipsum
+                  available, but the majority have suffered alteration in some
+                  form, by injected humour, or randomised words which don't look
+                  even slightly believable
+                </p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="inror_box">
+                <h3>CONTACTS</h3>
+                <p>
+                  There are many variations of passages of Lorem Ipsum
+                  available, but the majority have suffered alteration in some
+                  form, by injected humour, or randomised words which don't look
+                  even slightly believable
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <p>
+                  © 2024 All Rights Reserved. Design by Amigos
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- end footer -->
+    <!-- Javascript files-->
+    <script src="./static/js/jquery.min.js"></script>
+    <script src="./static/js/popper.min.js"></script>
+    <script src="./static/js/bootstrap.bundle.min.js"></script>
+    <script src="./static/js/jquery-3.0.0.min.js"></script>
+    <!-- sidebar -->
+    <script src="./static/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="./static/js/custom.js"></script>
+  </body>
+</html>
+<script>
+  // Calculate the height of three pages
+  const threePagesHeight = window.innerHeight * 3;
+  function navigate() {
+    var fileName = document.getElementById("srch").value.trim();
+
+    // Check if the input is not empty
+    if (fileName !== "") {
+      // Navigate to the HTML file
+      window.location.href = fileName;
+    } else {
+      // Alert user if the input is empty
+      alert("Please enter a file name");
+    }
+  }
+  // Create the scroll effect
+  // Get the input field
+  var input = document.getElementById("srch");
+
+  // Execute a function when the user presses a key on the keyboard
+  input.addEventListener("keypress", function (event) {
+    // If the user presses the "Enter" key on the keyboard
+    if (event.key === "Enter") {
+      // Cancel the default action, if needed
+      event.preventDefault();
+      // Trigger the button element with a click
+      document.getElementById("forsearch").click();
+    }
+  });
+  function scrollThreePages(direction) {
+    const currentPosition = window.pageYOffset;
+    const targetPosition =
+      direction === "up"
+        ? currentPosition - threePagesHeight
+        : currentPosition + threePagesHeight;
+
+    const scrollAnimation = window.requestAnimationFrame(() => {
+      window.scrollTo(0, targetPosition);
+      if (window.pageYOffset === targetPosition) {
+        window.cancelAnimationFrame(scrollAnimation);
+      } else {
+        scrollThreePages(direction);
+      }
+    });
+  }
+
+  // Add event listeners for scrolling up and down
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowUp") {
+      scrollThreePages("up");
+    } else if (event.key === "ArrowDown") {
+      scrollThreePages("down");
+    }
+  });
+
+  document.querySelector(".up-arrow").addEventListener("click", () => {
+    scrollThreePages("up");
+  });
+
+  document.querySelector(".down-arrow").addEventListener("click", () => {
+    scrollThreePages("down");
+  });
+
+  function cameraIconClicked() {
+    window.location.href = "camera.html";
+  }
+
+  document
+    .getElementById("cameraIcon")
+    .addEventListener("click", cameraIconClicked);
+</script>

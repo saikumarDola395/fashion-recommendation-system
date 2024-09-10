@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>romofyi</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="./static/css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="./static/css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="./static/css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="./static/images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="./static/css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
+      <style>
+         /*body {
+             background-color:pink;
+             font-family: Arial, sans-serif;
+             margin: 0;
+             padding: 0;
+         }
+         .container {
+             width: 100%;
+             margin: 0 auto;
+             padding: 20px;
+         }*/
+         .product_main .card {
+             background-color: #f8f9fa;
+             border: 1px solid #dee2e6;
+             border-radius: 0.25rem;
+             padding: 20px;
+             margin-bottom: 20px;
+             display: inline-block;
+             width: 200px;
+             text-align: center;
+         }
+         .product_main .card img {
+             width: 100%;
+             height: 200px;
+             object-fit:contain;
+         }
+         .product_main .card h3 {
+             margin: 10px 0;
+         }
+         .product_main .card p {
+             margin: 0;
+         }
+     </style>
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="./static/images/loading.gif" alt="#" /></div>
+      </div>
+      <!-- end loader -->
+      <!-- header -->
+      <header>
+         <!-- header inner -->
+         <div class="header">
+            <!-- <div class="header_top d_none1">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-4">
+                        <ul class="conta_icon ">
+                           <li><a href="#"><img src="./static/images/call.png" alt="#"/>Call us: 0126 - 922 - 0162</a> </li>
+                        </ul>
+                     </div>
+                     <div class="col-md-4">
+                        <ul class="social_icon">
+                           <li> <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i>
+                              </a>
+                           </li>
+                           <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
+                           <li> <a href="#"> <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                           <li> <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i>
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="se_fonr1">
+                           <form action="#" >
+                              <div class="select-box">
+                                 <label for="select-box1" class="label select-box1"><span class="label-desc">English</span> </label>
+                                 <select id="select-box1" class="select">
+                                    <option value="Choice 1">English</option>
+                                    <option value="Choice 1">Falkla</option>
+                                    <option value="Choice 2">Germa</option>
+                                    <option value="Choice 3">Neverl</option>
+                                 </select>
+                              </div>
+                           </form>
+                           <span class="time_o"> Open hour: 8.00 - 18.00</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div> -->
+            <div class="header_midil">
+               <div class="container">
+                  <div class="row d_flex">
+                     <div class="col-md-4">
+                        <ul class="conta_icon d_none1">
+                           <li><a href="#"><img src="./static/images/email.png" alt="#"/>amigos@gmail.com</a> </li>
+                        </ul>
+                     </div>
+                     <div class="col-md-4">
+                        <a class="logo" href="#" style="height: 40px;"><img style="height: 40px;" src="https://i.ibb.co/ZNfr3Hk/logo.jpg" alt="#"/></a>
+                     </div>
+                     <div class="col-md-4">
+                        <ul class="right_icon d_none1">
+                           <li><a href="#"><img src="./static/images/shopping.png" alt="#"/></a> </li>
+                           <a href="#" class="order">Order Now</a> 
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="header_bottom">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                        <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                           <span class="navbar-toggler-icon"></span>
+                           </button>
+                           <div class="collapse navbar-collapse" id="navbarsExample04">
+                              <ul class="navbar-nav mr-auto">
+                                 <li class="nav-item active">
+                                    <a class="nav-link" href="/">Home</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="about">About</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="products">Products</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="fashion">Fashion</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="news">News</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="contact">Contact</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="upload">Upload</a>
+                                 </li>
+                              </ul>
+                              
+                           </div>
+                        </nav>
+                     </div>
+                     <div class="col-md-3">
+                        <div class="search">
+                              <input class="form_sea" type="text" placeholder="Search" id="srch" name="search">
+                              <button type="submit" id="forsearch"  onclick="navigate()"class="seach_icon"><i class="fa fa-search"></i></button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- end header inner -->
+      <!-- end header -->
+      
+      <!-- project section -->
+      <div id="project" class="project">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2>Fashion Recommendation System</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="product_main">
+                  
+                  <div class="card">
+                     <a href="https://www.amazon.in/MARKRICH-Textured-Formal-Office-Sleeves/dp/B0C4DPRDMH/ref=sr_1_1_sspa?crid=32X0K0N753YSH&dib=eyJ2IjoiMSJ9.o79ExI1pg19IgMuhO7Bg3odiOOmFIBRbBEK5HgGfpBLKz8uEXmN1NHrHh7I_6nj2EU1OX7h-lhDVFxw7gWIqN6L0TPfqWsQswJTAMVGZmmjHspu-Op6FLoua1Rkv7VhNPih7GOU-jyypWdOJ4C5ipQX4sOidG6V5MFck1BikTu4fI-F4Xbkv60mVCCzIHh2iQ3dAwYlHIKfe4dijuthhCr_hh9GsvzX_9iO5AIcFf5_d2kafvo6XpQXDiySW0_c_jaSe6Nk7-xNHRyIFdEv7lz9WhO_TkiF8lohdp653L4M.UBnC5rZp_7mWT0P8bOWkM-fg6ZN8FOxyPpbP9JP4qng&dib_tag=se&keywords=purple+shirts+for+men&qid=1710743667&sprefix=purpule++%2Caps%2C894&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1">
+                              <img src="https://m.media-amazon.com/images/I/613B3PfjORL._SY550_.jpg" alt="Product 1">
+                  </a>
+                              <h3>Product 5</h3>
+                              <p>Price: $100</p>
+                          </div>
+              
+               <div class="card">
+                     <a href="https://www.amazon.in/Lacoste-Mens-Slim-Shirt-PH6348SGI_Purple/dp/B0CG6MLB91/ref=sr_1_2_sspa?crid=32X0K0N753YSH&dib=eyJ2IjoiMSJ9.o79ExI1pg19IgMuhO7Bg3odiOOmFIBRbBEK5HgGfpBLKz8uEXmN1NHrHh7I_6nj2EU1OX7h-lhDVFxw7gWIqN6L0TPfqWsQswJTAMVGZmmjHspu-Op6FLoua1Rkv7VhNPih7GOU-jyypWdOJ4C5ipQX4sOidG6V5MFck1BikTu4fI-F4Xbkv60mVCCzIHh2iQ3dAwYlHIKfe4dijuthhCr_hh9GsvzX_9iO5AIcFf5_d2kafvo6XpQXDiySW0_c_jaSe6Nk7-xNHRyIFdEv7lz9WhO_TkiF8lohdp653L4M.UBnC5rZp_7mWT0P8bOWkM-fg6ZN8FOxyPpbP9JP4qng&dib_tag=se&keywords=purple+shirts+for+men&qid=1710743667&sprefix=purpule++%2Caps%2C894&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1">
+                              <img src="https://m.media-amazon.com/images/I/71AfuWO2b3L._SX679_.jpg" alt="Product 1">
+                  </a>
+                              <h3>Product 5</h3>
+                              <p>Price: $100</p>
+                          </div>
+              
+              
+              
+               <div class="card">
+                     <a href="https://www.amazon.in/SWADESI-STUFF-Regular-Polo-T-Shirt/dp/B0BSV2FFPN/ref=sr_1_4_sspa?crid=32X0K0N753YSH&dib=eyJ2IjoiMSJ9.o79ExI1pg19IgMuhO7Bg3odiOOmFIBRbBEK5HgGfpBLKz8uEXmN1NHrHh7I_6nj2EU1OX7h-lhDVFxw7gWIqN6L0TPfqWsQswJTAMVGZmmjHspu-Op6FLoua1Rkv7VhNPih7GOU-jyypWdOJ4C5ipQX4sOidG6V5MFck1BikTu4fI-F4Xbkv60mVCCzIHh2iQ3dAwYlHIKfe4dijuthhCr_hh9GsvzX_9iO5AIcFf5_d2kafvo6XpQXDiySW0_c_jaSe6Nk7-xNHRyIFdEv7lz9WhO_TkiF8lohdp653L4M.UBnC5rZp_7mWT0P8bOWkM-fg6ZN8FOxyPpbP9JP4qng&dib_tag=se&keywords=purple+shirts+for+men&qid=1710743667&sprefix=purpule++%2Caps%2C894&sr=8-4-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1">
+                              <img src="https://m.media-amazon.com/images/I/81MYMAmQjhL._SX466_.jpg" alt="Product 1">
+                  </a>
+                              <h3>Product 5</h3>
+                              <p>Price: $100</p>
+                          </div>
+              
+              
+               <div class="card">
+                     <a href="https://www.amazon.in/Zombom-Sleeve-Cotton-Casual-Purple/dp/B07NJ47LXD/ref=sr_1_5?crid=32X0K0N753YSH&dib=eyJ2IjoiMSJ9.o79ExI1pg19IgMuhO7Bg3odiOOmFIBRbBEK5HgGfpBLKz8uEXmN1NHrHh7I_6nj2EU1OX7h-lhDVFxw7gWIqN6L0TPfqWsQswJTAMVGZmmjHspu-Op6FLoua1Rkv7VhNPih7GOU-jyypWdOJ4C5ipQX4sOidG6V5MFck1BikTu4fI-F4Xbkv60mVCCzIHh2iQ3dAwYlHIKfe4dijuthhCr_hh9GsvzX_9iO5AIcFf5_d2kafvo6XpQXDiySW0_c_jaSe6Nk7-xNHRyIFdEv7lz9WhO_TkiF8lohdp653L4M.UBnC5rZp_7mWT0P8bOWkM-fg6ZN8FOxyPpbP9JP4qng&dib_tag=se&keywords=purple+shirts+for+men&qid=1710743667&sprefix=purpule++%2Caps%2C894&sr=8-5">
+                              <img src="https://m.media-amazon.com/images/I/511IVewEhoL._SX522_.jpg" alt="Product 1">
+                  </a>
+                              <h3>Product 5</h3>
+                              <p>Price: $100</p>
+                          </div>
+              
+              
+               <div class="card">
+                     <a href="https://www.amazon.in/Dennis-Lingo-Purple-Cotton-C610_Purple_L/dp/B09CZ8N6NT/ref=sr_1_6?crid=32X0K0N753YSH&dib=eyJ2IjoiMSJ9.o79ExI1pg19IgMuhO7Bg3odiOOmFIBRbBEK5HgGfpBLKz8uEXmN1NHrHh7I_6nj2EU1OX7h-lhDVFxw7gWIqN6L0TPfqWsQswJTAMVGZmmjHspu-Op6FLoua1Rkv7VhNPih7GOU-jyypWdOJ4C5ipQX4sOidG6V5MFck1BikTu4fI-F4Xbkv60mVCCzIHh2iQ3dAwYlHIKfe4dijuthhCr_hh9GsvzX_9iO5AIcFf5_d2kafvo6XpQXDiySW0_c_jaSe6Nk7-xNHRyIFdEv7lz9WhO_TkiF8lohdp653L4M.UBnC5rZp_7mWT0P8bOWkM-fg6ZN8FOxyPpbP9JP4qng&dib_tag=se&keywords=purple+shirts+for+men&qid=1710743667&sprefix=purpule++%2Caps%2C894&sr=8-6">
+                              <img src="https://m.media-amazon.com/images/I/51MmhD8jgJL._SX522_.jpg" alt="Product 1">
+                  </a>
+                              <h3>Product 5</h3>
+                              <p>Price: $100</p>
+                          </div>
+              
+              
+               <div class="card">
+                     <a href="https://www.amazon.in/Van-Heusen-Sport-VHSFBSLPT19532_Dark-Purple_40/dp/B07K3FS2YG/ref=sr_1_7?crid=32X0K0N753YSH&dib=eyJ2IjoiMSJ9.o79ExI1pg19IgMuhO7Bg3odiOOmFIBRbBEK5HgGfpBLKz8uEXmN1NHrHh7I_6nj2EU1OX7h-lhDVFxw7gWIqN6L0TPfqWsQswJTAMVGZmmjHspu-Op6FLoua1Rkv7VhNPih7GOU-jyypWdOJ4C5ipQX4sOidG6V5MFck1BikTu4fI-F4Xbkv60mVCCzIHh2iQ3dAwYlHIKfe4dijuthhCr_hh9GsvzX_9iO5AIcFf5_d2kafvo6XpQXDiySW0_c_jaSe6Nk7-xNHRyIFdEv7lz9WhO_TkiF8lohdp653L4M.UBnC5rZp_7mWT0P8bOWkM-fg6ZN8FOxyPpbP9JP4qng&dib_tag=se&keywords=purple+shirts+for+men&qid=1710743667&sprefix=purpule++%2Caps%2C894&sr=8-7">
+                              <img src="https://m.media-amazon.com/images/I/81J75dgrPRL._SY550_.jpg" alt="Product 1">
+                  </a>
+                              <h3>Product 5</h3>
+                              <p>Price: $100</p>
+                          </div>
+              
+              
+               <div class="card">
+                     <a href="https://www.amazon.in/Peter-England-Solid-Regular-PESFMNUBT16980_Purple/dp/B0B9S6V494/ref=sr_1_8?crid=32X0K0N753YSH&dib=eyJ2IjoiMSJ9.o79ExI1pg19IgMuhO7Bg3odiOOmFIBRbBEK5HgGfpBLKz8uEXmN1NHrHh7I_6nj2EU1OX7h-lhDVFxw7gWIqN6L0TPfqWsQswJTAMVGZmmjHspu-Op6FLoua1Rkv7VhNPih7GOU-jyypWdOJ4C5ipQX4sOidG6V5MFck1BikTu4fI-F4Xbkv60mVCCzIHh2iQ3dAwYlHIKfe4dijuthhCr_hh9GsvzX_9iO5AIcFf5_d2kafvo6XpQXDiySW0_c_jaSe6Nk7-xNHRyIFdEv7lz9WhO_TkiF8lohdp653L4M.UBnC5rZp_7mWT0P8bOWkM-fg6ZN8FOxyPpbP9JP4qng&dib_tag=se&keywords=purple+shirts+for+men&qid=1710743667&sprefix=purpule++%2Caps%2C894&sr=8-8">
+                              <img src="https://m.media-amazon.com/images/I/51IFWuDWX-L._SY550_.jpg" alt="Product 1">
+                  </a>
+                              <h3>Product 5</h3>
+                              <p>Price: $100</p>
+                          </div>
+              
+              
+               <div class="card">
+                     <a href="https://www.amazon.in/Dennis-Lingo-Solid-Casual-C301_Purple_L_Purple_L/dp/B0751DGDPJ/ref=sr_1_9?crid=32X0K0N753YSH&dib=eyJ2IjoiMSJ9.o79ExI1pg19IgMuhO7Bg3odiOOmFIBRbBEK5HgGfpBLKz8uEXmN1NHrHh7I_6nj2EU1OX7h-lhDVFxw7gWIqN6L0TPfqWsQswJTAMVGZmmjHspu-Op6FLoua1Rkv7VhNPih7GOU-jyypWdOJ4C5ipQX4sOidG6V5MFck1BikTu4fI-F4Xbkv60mVCCzIHh2iQ3dAwYlHIKfe4dijuthhCr_hh9GsvzX_9iO5AIcFf5_d2kafvo6XpQXDiySW0_c_jaSe6Nk7-xNHRyIFdEv7lz9WhO_TkiF8lohdp653L4M.UBnC5rZp_7mWT0P8bOWkM-fg6ZN8FOxyPpbP9JP4qng&dib_tag=se&keywords=purple+shirts+for+men&qid=1710743667&sprefix=purpule++%2Caps%2C894&sr=8-9">
+                              <img src="https://m.media-amazon.com/images/I/61ERMvWcGzL._SX679_.jpg" alt="Product 1">
+                  </a>
+                              <h3>Product 5</h3>
+                              <p>Price: $100</p>
+                          </div>
+              
+              
+               <div class="card">
+                     <a href="https://www.amazon.in/Indian-Garage-Co-Shirt-0123-SHFLFR-03-07_Purple/dp/B0C6KZ1Q69/ref=sr_1_13?crid=32X0K0N753YSH&dib=eyJ2IjoiMSJ9.o79ExI1pg19IgMuhO7Bg3odiOOmFIBRbBEK5HgGfpBLKz8uEXmN1NHrHh7I_6nj2EU1OX7h-lhDVFxw7gWIqN6L0TPfqWsQswJTAMVGZmmjHspu-Op6FLoua1Rkv7VhNPih7GOU-jyypWdOJ4C5ipQX4sOidG6V5MFck1BikTu4fI-F4Xbkv60mVCCzIHh2iQ3dAwYlHIKfe4dijuthhCr_hh9GsvzX_9iO5AIcFf5_d2kafvo6XpQXDiySW0_c_jaSe6Nk7-xNHRyIFdEv7lz9WhO_TkiF8lohdp653L4M.UBnC5rZp_7mWT0P8bOWkM-fg6ZN8FOxyPpbP9JP4qng&dib_tag=se&keywords=purple+shirts+for+men&qid=1710743667&sprefix=purpule++%2Caps%2C894&sr=8-13">
+                              <img src="https://m.media-amazon.com/images/I/517CXrp94hL._SX522_.jpg" alt="Product 1">
+                  </a>
+                              <h3>Product 5</h3>
+                              <p>Price: $100</p>
+                          </div>
+              
+               <div class="card">
+                     <a href="https://www.amazon.in/DEELMO-Cotton-Regular-Sleeve-Casual/dp/B0CJ9CTXH1/ref=sr_1_19?crid=32X0K0N753YSH&dib=eyJ2IjoiMSJ9.o79ExI1pg19IgMuhO7Bg3odiOOmFIBRbBEK5HgGfpBLKz8uEXmN1NHrHh7I_6nj2EU1OX7h-lhDVFxw7gWIqN6L0TPfqWsQswJTAMVGZmmjHspu-Op6FLoua1Rkv7VhNPih7GOU-jyypWdOJ4C5ipQX4sOidG6V5MFck1BikTu4fI-F4Xbkv60mVCCzIHh2iQ3dAwYlHIKfe4dijuthhCr_hh9GsvzX_9iO5AIcFf5_d2kafvo6XpQXDiySW0_c_jaSe6Nk7-xNHRyIFdEv7lz9WhO_TkiF8lohdp653L4M.UBnC5rZp_7mWT0P8bOWkM-fg6ZN8FOxyPpbP9JP4qng&dib_tag=se&keywords=purple+shirts+for+men&qid=1710743667&sprefix=purpule++%2Caps%2C894&sr=8-19">
+                              <img src="https://m.media-amazon.com/images/I/61+30OIKiuL._SX522_.jpg" alt="Product 1">
+                  </a>
+                              <h3>Product 5</h3>
+                              <p>Price: $100</p>
+                          </div>
+              
+              
+               <div class="card">
+                     <a href="https://www.amazon.in/Peter-England-Mens-Shirt-PCSFSSLPG71319_Purple/dp/B0C7LHZ94K/ref=sr_1_29?crid=32X0K0N753YSH&dib=eyJ2IjoiMSJ9.o79ExI1pg19IgMuhO7Bg3odiOOmFIBRbBEK5HgGfpBLKz8uEXmN1NHrHh7I_6nj2EU1OX7h-lhDVFxw7gWIqN6L0TPfqWsQswJTAMVGZmmjHspu-Op6FLoua1Rkv7VhNPih7GOU-jyypWdOJ4C5ipQX4sOidG6V5MFck1BikTu4fI-F4Xbkv60mVCCzIHh2iQ3dAwYlHIKfe4dijuthhCr_hh9GsvzX_9iO5AIcFf5_d2kafvo6XpQXDiySW0_c_jaSe6Nk7-xNHRyIFdEv7lz9WhO_TkiF8lohdp653L4M.UBnC5rZp_7mWT0P8bOWkM-fg6ZN8FOxyPpbP9JP4qng&dib_tag=se&keywords=purple+shirts+for+men&qid=1710743667&sprefix=purpule++%2Caps%2C894&sr=8-29">
+                              <img src="https://m.media-amazon.com/images/I/61UOi-zOJLL._SY550_.jpg" alt="Product 1">
+                  </a>
+                              <h3>Product 5</h3>
+                              <p>Price: $100</p>
+                          </div>
+              
+              
+               <div class="card">
+                     <a href="https://www.amazon.in/Van-Heusen-Regular-VHSFCCUBR70449_Dark-Purple/dp/B0C5F3C7FX/ref=sr_1_40?crid=32X0K0N753YSH&dib=eyJ2IjoiMSJ9.o79ExI1pg19IgMuhO7Bg3odiOOmFIBRbBEK5HgGfpBLKz8uEXmN1NHrHh7I_6nj2EU1OX7h-lhDVFxw7gWIqN6L0TPfqWsQswJTAMVGZmmjHspu-Op6FLoua1Rkv7VhNPih7GOU-jyypWdOJ4C5ipQX4sOidG6V5MFck1BikTu4fI-F4Xbkv60mVCCzIHh2iQ3dAwYlHIKfe4dijuthhCr_hh9GsvzX_9iO5AIcFf5_d2kafvo6XpQXDiySW0_c_jaSe6Nk7-xNHRyIFdEv7lz9WhO_TkiF8lohdp653L4M.UBnC5rZp_7mWT0P8bOWkM-fg6ZN8FOxyPpbP9JP4qng&dib_tag=se&keywords=purple+shirts+for+men&qid=1710743667&sprefix=purpule++%2Caps%2C894&sr=8-40">
+                              <img src="https://m.media-amazon.com/images/I/61rTHtPz-FL._SY550_.jpg" alt="Product 1">
+                  </a>
+                              <h3>Product 5</h3>
+                              <p>Price: $100</p>
+                          </div>
+              
+              
+               <div class="card">
+                     <a href="https://www.amazon.in/Zombom-Classic-Casual-Shirts-Purple/dp/B08P5S4YN3/ref=sr_1_46?crid=32X0K0N753YSH&dib=eyJ2IjoiMSJ9.o79ExI1pg19IgMuhO7Bg3odiOOmFIBRbBEK5HgGfpBLKz8uEXmN1NHrHh7I_6nj2EU1OX7h-lhDVFxw7gWIqN6L0TPfqWsQswJTAMVGZmmjHspu-Op6FLoua1Rkv7VhNPih7GOU-jyypWdOJ4C5ipQX4sOidG6V5MFck1BikTu4fI-F4Xbkv60mVCCzIHh2iQ3dAwYlHIKfe4dijuthhCr_hh9GsvzX_9iO5AIcFf5_d2kafvo6XpQXDiySW0_c_jaSe6Nk7-xNHRyIFdEv7lz9WhO_TkiF8lohdp653L4M.UBnC5rZp_7mWT0P8bOWkM-fg6ZN8FOxyPpbP9JP4qng&dib_tag=se&keywords=purple+shirts+for+men&qid=1710743667&sprefix=purpule++%2Caps%2C894&sr=8-46">
+                              <img src="https://m.media-amazon.com/images/I/511IVewEhoL._SX522_.jpg" alt="Product 1">
+                  </a>
+                              <h3>Product 5</h3>
+                              <p>Price: $100</p>
+                          </div>
+              
+              
+               <div class="card">
+                     <a href="https://www.amazon.in/Van-Heusen-Sport-Regular-VSKPWRGF981010_Purple_M/dp/B07HJDH911/ref=sr_1_48?crid=32X0K0N753YSH&dib=eyJ2IjoiMSJ9.o79ExI1pg19IgMuhO7Bg3odiOOmFIBRbBEK5HgGfpBLKz8uEXmN1NHrHh7I_6nj2EU1OX7h-lhDVFxw7gWIqN6L0TPfqWsQswJTAMVGZmmjHspu-Op6FLoua1Rkv7VhNPih7GOU-jyypWdOJ4C5ipQX4sOidG6V5MFck1BikTu4fI-F4Xbkv60mVCCzIHh2iQ3dAwYlHIKfe4dijuthhCr_hh9GsvzX_9iO5AIcFf5_d2kafvo6XpQXDiySW0_c_jaSe6Nk7-xNHRyIFdEv7lz9WhO_TkiF8lohdp653L4M.UBnC5rZp_7mWT0P8bOWkM-fg6ZN8FOxyPpbP9JP4qng&dib_tag=se&keywords=purple+shirts+for+men&qid=1710743667&sprefix=purpule++%2Caps%2C894&sr=8-48">
+                              <img src="https://m.media-amazon.com/images/I/71mabojWcsL._SY550_.jpg" alt="Product 1">
+                  </a>
+                              <h3>Product 5</h3>
+                              <p>Price: $100</p>
+                          </div>
+              
+              
+               <div class="card">
+                     <a href="https://www.amazon.in/DEEMOON-Regular-Spread-Collar-Casual/dp/B0CW3QHFM6/ref=sr_1_56?crid=32X0K0N753YSH&dib=eyJ2IjoiMSJ9.ysURbZgjhyqFHP4nA8vXS1NgVFkW9SKXQlcxy-Quuz_XMamK27OATzOH_g9ubipEfAEgqeeqV3BNmZKdq-xzxtku5UDKbJUTpZ1sZFsC3PE.jQFihKkcVJB3-8NqoAwVt0YobpksHMsMqAaT2QSq4Vw&dib_tag=se&keywords=purple+shirts+for+men&qid=1710750785&sprefix=purpule++%2Caps%2C894&sr=8-56">
+                              <img src="https://m.media-amazon.com/images/I/613HANNgCdL._SY550_.jpg" alt="Product 1">
+                  </a>
+                              <h3>Product 5</h3>
+                              <p>Price: $100</p>
+                          </div>
+              
+              
+               <div class="card">
+                     <a href="https://www.amazon.in/Peter-England-Mens-Shirt-PESFOSLBE82680_Purple/dp/B09P2JWVBG/ref=sr_1_54?crid=32X0K0N753YSH&dib=eyJ2IjoiMSJ9.5Dlcb1ZJfT_-VBc6XZPE6ZU7oNmk7a0a6Ki-LX4jlpEgAVTzy7vSkU_PiuWoEuIsx6R3R27Vcu-vMpLu6X5dzHqFhKrUAzTc55jxkSzHmyIL2-3g39zvOhDEM1QKG_tSwIJQc6PlnA_LQ2WzsS0c57Xp6zb-b4KV-WUDZrampW-uyPcsuisXt2kVqeAzkliLbBKeMa2u-uEtmvnpF26Zs2MAAyd1GLbUEa9MVL5Ukx6uM1FkW9C18qVio6-UD_kSgasvSgpTNZ4Dl1meTcqodsr4TN4LvdFnImuwTgJTGfI.BIADic106BXOmmex8s36B9-yehH_nCrjEIv-N_gaC8Y&dib_tag=se&keywords=purple+shirts+for+men&qid=1710750785&sprefix=purpule++%2Caps%2C894&sr=8-54">
+                              <img src="https://m.media-amazon.com/images/I/61MsLiOyC4L._SY550_.jpg" alt="Product 1">
+                  </a>
+                              <h3>Product 5</h3>
+                              <p>Price: $100</p>
+                          </div>
+              
+               <div class="card">
+                     <a href="https://www.amazon.in/Van-Heusen-Mens-Shirt-VDSFESLF506202_Teal/dp/B0C77NC5ZX/ref=sr_1_62_sspa?crid=32X0K0N753YSH&dib=eyJ2IjoiMSJ9.5Dlcb1ZJfT_-VBc6XZPE6ZU7oNmk7a0a6Ki-LX4jlpEgAVTzy7vSkU_PiuWoEuIsx6R3R27Vcu-vMpLu6X5dzHqFhKrUAzTc55jxkSzHmyIL2-3g39zvOhDEM1QKG_tSwIJQc6PlnA_LQ2WzsS0c57Xp6zb-b4KV-WUDZrampW-uyPcsuisXt2kVqeAzkliLbBKeMa2u-uEtmvnpF26Zs2MAAyd1GLbUEa9MVL5Ukx6uM1FkW9C18qVio6-UD_kSgasvSgpTNZ4Dl1meTcqodsr4TN4LvdFnImuwTgJTGfI.BIADic106BXOmmex8s36B9-yehH_nCrjEIv-N_gaC8Y&dib_tag=se&keywords=purple+shirts+for+men&qid=1710750785&sprefix=purpule++%2Caps%2C894&sr=8-62-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9tdGY&psc=1">
+                              <img src="https://m.media-amazon.com/images/I/61Q5U6o+5qL._SY550_.jpg" alt="Product 1">
+                  </a>
+                              <h3>Product 5</h3>
+                              <p>Price: $100</p>
+                          </div>
+              
+               <div class="card">
+                     <a href="https://www.amazon.in/Amazon-Brand-Oversized-T-Shirt-SYM-A23-TSH-01_Light/dp/B0CKC1XH6D/ref=sr_1_2_sspa?crid=2I78R71UY7PUE&dib=eyJ2IjoiMSJ9.WYvWD2cgjdBPtWlnbqzYv7CzvGcVQ9ZVMN4WaL9otzGNFDzEEB17jqUj5h_Q8WIE7IZnmAUPtshCZi33fAvJLtpEDCIN4WdGH-hvV3hI8dLVQHxupeFOgdHiRNdXOTfTE8-FObYK_FStDjFwUDnOLEBJXTwqill3LVk6yxIcYOq5c6wLLmgpUFnG9dWjgCGnijxHljqe5IDXtBZ4pYg-x8rPhx3SVfVtuZWvJFPteU8RI1WPLfw5kZmqTT_RoJuTu-7reEJ9SvDuErE6iMz1aaQKgEYGkajnBiN6DLiCffo.wvx5GpxKw36cSCC8_DQQ-MBYpqvvCDg9GsnJb2TOS54&dib_tag=se&keywords=purple+t+shirts+for+men&qid=1710750911&sprefix=purple+tshirts+for+men%2Caps%2C245&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1">
+                              <img src="https://m.media-amazon.com/images/I/71MLQlh5NsL._SY550_.jpg" alt="Product 1">
+                  </a>
+                              <h3>Product 5</h3>
+                              <p>Price: $100</p>
+                          </div>
+              
+              
+               <div class="card">
+                     <a href="https://www.amazon.in/Van-Heusen-Sport-Regular-VSKPWRGF981010_Purple_M/dp/B07HJDH911/ref=sr_1_4_sspa?crid=2I78R71UY7PUE&dib=eyJ2IjoiMSJ9.WYvWD2cgjdBPtWlnbqzYv7CzvGcVQ9ZVMN4WaL9otzGNFDzEEB17jqUj5h_Q8WIE7IZnmAUPtshCZi33fAvJLtpEDCIN4WdGH-hvV3hI8dLVQHxupeFOgdHiRNdXOTfTE8-FObYK_FStDjFwUDnOLEBJXTwqill3LVk6yxIcYOq5c6wLLmgpUFnG9dWjgCGnijxHljqe5IDXtBZ4pYg-x8rPhx3SVfVtuZWvJFPteU8RI1WPLfw5kZmqTT_RoJuTu-7reEJ9SvDuErE6iMz1aaQKgEYGkajnBiN6DLiCffo.wvx5GpxKw36cSCC8_DQQ-MBYpqvvCDg9GsnJb2TOS54&dib_tag=se&keywords=purple+t+shirts+for+men&qid=1710750911&sprefix=purple+tshirts+for+men%2Caps%2C245&sr=8-4-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1">
+                              <img src="https://m.media-amazon.com/images/I/71mabojWcsL._SY550_.jpg" alt="Product 1">
+                  </a>
+                              <h3>Product 5</h3>
+                              <p>Price: $100</p>
+                          </div>
+              
+              
+              
+              
+               <div class="card">
+                     <a href="https://www.amazon.in/KSHS-Oversized-Typography-Printed-T-Shirt/dp/B0C2VDC611/ref=sr_1_7?crid=2I78R71UY7PUE&dib=eyJ2IjoiMSJ9.WYvWD2cgjdBPtWlnbqzYv7CzvGcVQ9ZVMN4WaL9otzGNFDzEEB17jqUj5h_Q8WIE7IZnmAUPtshCZi33fAvJLtpEDCIN4WdGH-hvV3hI8dLVQHxupeFOgdHiRNdXOTfTE8-FObYK_FStDjFwUDnOLEBJXTwqill3LVk6yxIcYOq5c6wLLmgpUFnG9dWjgCGnijxHljqe5IDXtBZ4pYg-x8rPhx3SVfVtuZWvJFPteU8RI1WPLfw5kZmqTT_RoJuTu-7reEJ9SvDuErE6iMz1aaQKgEYGkajnBiN6DLiCffo.wvx5GpxKw36cSCC8_DQQ-MBYpqvvCDg9GsnJb2TOS54&dib_tag=se&keywords=purple+t+shirts+for+men&qid=1710750911&sprefix=purple+tshirts+for+men%2Caps%2C245&sr=8-7">
+                              <img src="https://m.media-amazon.com/images/I/418VXvOd2HL._SY500_.jpg" alt="Product 1">
+                  </a>
+                              <h3>Product 5</h3>
+                              <p>Price: $100</p>
+                          </div>
+              
+              
+              
+              
+               <div class="card">
+                     <a href="https://www.amazon.in/BULLMER-Front-Printed-Oversized-T-Shirt/dp/B0CV1421CM/ref=sr_1_10?crid=2I78R71UY7PUE&dib=eyJ2IjoiMSJ9.WYvWD2cgjdBPtWlnbqzYv7CzvGcVQ9ZVMN4WaL9otzGNFDzEEB17jqUj5h_Q8WIE7IZnmAUPtshCZi33fAvJLtpEDCIN4WdGH-hvV3hI8dLVQHxupeFOgdHiRNdXOTfTE8-FObYK_FStDjFwUDnOLEBJXTwqill3LVk6yxIcYOq5c6wLLmgpUFnG9dWjgCGnijxHljqe5IDXtBZ4pYg-x8rPhx3SVfVtuZWvJFPteU8RI1WPLfw5kZmqTT_RoJuTu-7reEJ9SvDuErE6iMz1aaQKgEYGkajnBiN6DLiCffo.wvx5GpxKw36cSCC8_DQQ-MBYpqvvCDg9GsnJb2TOS54&dib_tag=se&keywords=purple+t+shirts+for+men&qid=1710750911&sprefix=purple+tshirts+for+men%2Caps%2C245&sr=8-10">
+                              <img src="https://m.media-amazon.com/images/I/61sDWttRJzL._SY550_.jpg" alt="Product 1">
+                  </a>
+                              <h3>Product 5</h3>
+                              <p>Price: $100</p>
+                          </div>
+              
+              
+              
+              
+               <div class="card">
+                     <a href="https://www.amazon.in/LEOTUDE-Regular-Cotton-Blend-T-Shirt-303_Lilac_PRPL_P/dp/B0BBN391C1/ref=sr_1_17?crid=2I78R71UY7PUE&dib=eyJ2IjoiMSJ9.WYvWD2cgjdBPtWlnbqzYv7CzvGcVQ9ZVMN4WaL9otzGNFDzEEB17jqUj5h_Q8WIE7IZnmAUPtshCZi33fAvJLtpEDCIN4WdGH-hvV3hI8dLVQHxupeFOgdHiRNdXOTfTE8-FObYK_FStDjFwUDnOLEBJXTwqill3LVk6yxIcYOq5c6wLLmgpUFnG9dWjgCGnijxHljqe5IDXtBZ4pYg-x8rPhx3SVfVtuZWvJFPteU8RI1WPLfw5kZmqTT_RoJuTu-7reEJ9SvDuErE6iMz1aaQKgEYGkajnBiN6DLiCffo.wvx5GpxKw36cSCC8_DQQ-MBYpqvvCDg9GsnJb2TOS54&dib_tag=se&keywords=purple+t+shirts+for+men&qid=1710750911&sprefix=purple+tshirts+for+men%2Caps%2C245&sr=8-17">
+                              <img src="https://m.media-amazon.com/images/I/71MqxD95ZHL._SY679_.jpg" alt="Product 1">
+                  </a>
+                              <h3>Product 5</h3>
+                              <p>Price: $100</p>
+                          </div>
+              
+              
+              
+              
+               <div class="card">
+                     <a href="https://www.amazon.in/Elegant-Sleek-Typography-T-Shirt-Lavender/dp/B0CVC82GZT/ref=sr_1_20?crid=2I78R71UY7PUE&dib=eyJ2IjoiMSJ9.WYvWD2cgjdBPtWlnbqzYv7CzvGcVQ9ZVMN4WaL9otzGNFDzEEB17jqUj5h_Q8WIE7IZnmAUPtshCZi33fAvJLtpEDCIN4WdGH-hvV3hI8dLVQHxupeFOgdHiRNdXOTfTE8-FObYK_FStDjFwUDnOLEBJXTwqill3LVk6yxIcYOq5c6wLLmgpUFnG9dWjgCGnijxHljqe5IDXtBZ4pYg-x8rPhx3SVfVtuZWvJFPteU8RI1WPLfw5kZmqTT_RoJuTu-7reEJ9SvDuErE6iMz1aaQKgEYGkajnBiN6DLiCffo.wvx5GpxKw36cSCC8_DQQ-MBYpqvvCDg9GsnJb2TOS54&dib_tag=se&keywords=purple+t+shirts+for+men&qid=1710750911&sprefix=purple+tshirts+for+men%2Caps%2C245&sr=8-20">
+                              <img src="https://m.media-amazon.com/images/I/61+ftPjOyJL._SY550_.jpg" alt="Product 1">
+                  </a>
+                              <h3>Product 5</h3>
+                              <p>Price: $100</p>
+                          </div>
+              
+              
+              
+               <div class="card">
+                     <a href="https://www.amazon.in/LEOTUDE-Oversized-Sleeve-Round-FS49_Purple_Easy_P_Purple_XXXL/dp/B0CJRFY87V/ref=sr_1_25?crid=2I78R71UY7PUE&dib=eyJ2IjoiMSJ9.WYvWD2cgjdBPtWlnbqzYv7CzvGcVQ9ZVMN4WaL9otzGNFDzEEB17jqUj5h_Q8WIE7IZnmAUPtshCZi33fAvJLtpEDCIN4WdGH-hvV3hI8dLVQHxupeFOgdHiRNdXOTfTE8-FObYK_FStDjFwUDnOLEBJXTwqill3LVk6yxIcYOq5c6wLLmgpUFnG9dWjgCGnijxHljqe5IDXtBZ4pYg-x8rPhx3SVfVtuZWvJFPteU8RI1WPLfw5kZmqTT_RoJuTu-7reEJ9SvDuErE6iMz1aaQKgEYGkajnBiN6DLiCffo.wvx5GpxKw36cSCC8_DQQ-MBYpqvvCDg9GsnJb2TOS54&dib_tag=se&keywords=purple+t+shirts+for+men&qid=1710750911&sprefix=purple+tshirts+for+men%2Caps%2C245&sr=8-25">
+                              <img src="https://m.media-amazon.com/images/I/613T97Wr9DL._SY550_.jpg" alt="Product 1">
+                  </a>
+                              <h3>Product 5</h3>
+                              <p>Price: $100</p>
+                          </div>
+              
+              
+              
+               <div class="card">
+                     <a href="https://www.amazon.in/max-Mens-Regular-T-Shirt-CABC24S114BT_Purple_XL/dp/B0CSFNXYTF/ref=sr_1_30?crid=2I78R71UY7PUE&dib=eyJ2IjoiMSJ9.WYvWD2cgjdBPtWlnbqzYv7CzvGcVQ9ZVMN4WaL9otzGNFDzEEB17jqUj5h_Q8WIE7IZnmAUPtshCZi33fAvJLtpEDCIN4WdGH-hvV3hI8dLVQHxupeFOgdHiRNdXOTfTE8-FObYK_FStDjFwUDnOLEBJXTwqill3LVk6yxIcYOq5c6wLLmgpUFnG9dWjgCGnijxHljqe5IDXtBZ4pYg-x8rPhx3SVfVtuZWvJFPteU8RI1WPLfw5kZmqTT_RoJuTu-7reEJ9SvDuErE6iMz1aaQKgEYGkajnBiN6DLiCffo.wvx5GpxKw36cSCC8_DQQ-MBYpqvvCDg9GsnJb2TOS54&dib_tag=se&keywords=purple+t+shirts+for+men&qid=1710750911&sprefix=purple+tshirts+for+men%2Caps%2C245&sr=8-30">
+                              <img src="https://m.media-amazon.com/images/I/71xuHgHYzPL._SY550_.jpg" alt="Product 1">
+                  </a>
+                              <h3>Product 5</h3>
+                              <p>Price: $100</p>
+                          </div>
+              
+              
+               <div class="card">
+                     <a href="https://www.amazon.in/Levis-Mens-Regular-T-Shirt-16960-1065_Purple/dp/B0C6QWDTRX/ref=sr_1_32?crid=2I78R71UY7PUE&dib=eyJ2IjoiMSJ9.WYvWD2cgjdBPtWlnbqzYv7CzvGcVQ9ZVMN4WaL9otzGNFDzEEB17jqUj5h_Q8WIE7IZnmAUPtshCZi33fAvJLtpEDCIN4WdGH-hvV3hI8dLVQHxupeFOgdHiRNdXOTfTE8-FObYK_FStDjFwUDnOLEBJXTwqill3LVk6yxIcYOq5c6wLLmgpUFnG9dWjgCGnijxHljqe5IDXtBZ4pYg-x8rPhx3SVfVtuZWvJFPteU8RI1WPLfw5kZmqTT_RoJuTu-7reEJ9SvDuErE6iMz1aaQKgEYGkajnBiN6DLiCffo.wvx5GpxKw36cSCC8_DQQ-MBYpqvvCDg9GsnJb2TOS54&dib_tag=se&keywords=purple+t+shirts+for+men&qid=1710750911&sprefix=purple+tshirts+for+men%2Caps%2C245&sr=8-32">
+                              <img src="https://m.media-amazon.com/images/I/51qLmiVBgBL._SX522_.jpg" alt="Product 1">
+                  </a>
+                              <h3>Product 5</h3>
+                              <p>Price: $100</p>
+                          </div>
+              
+               <div class="card">
+                     <a href="https://www.amazon.in/Jack-Jones-T-Shirt-12221492-Dahlia-Purple_Dahlia/dp/B09WVN4ZYM/ref=sr_1_35?crid=2I78R71UY7PUE&dib=eyJ2IjoiMSJ9.WYvWD2cgjdBPtWlnbqzYv7CzvGcVQ9ZVMN4WaL9otzGNFDzEEB17jqUj5h_Q8WIE7IZnmAUPtshCZi33fAvJLtpEDCIN4WdGH-hvV3hI8dLVQHxupeFOgdHiRNdXOTfTE8-FObYK_FStDjFwUDnOLEBJXTwqill3LVk6yxIcYOq5c6wLLmgpUFnG9dWjgCGnijxHljqe5IDXtBZ4pYg-x8rPhx3SVfVtuZWvJFPteU8RI1WPLfw5kZmqTT_RoJuTu-7reEJ9SvDuErE6iMz1aaQKgEYGkajnBiN6DLiCffo.wvx5GpxKw36cSCC8_DQQ-MBYpqvvCDg9GsnJb2TOS54&dib_tag=se&keywords=purple+t+shirts+for+men&qid=1710750911&sprefix=purple+tshirts+for+men%2Caps%2C245&sr=8-35">
+                              <img src="https://m.media-amazon.com/images/I/61UHr02bhsL._SY679_.jpg" alt="Product 1">
+                  </a>
+                              <h3>Product 5</h3>
+                              <p>Price: $100</p>
+                          </div>
+              
+              
+              
+               <div class="card">
+                     <a href="https://www.amazon.in/LEOTUDE-Oversized-Printed-T-Shirt-FS49_DRAGN_PRPL_P_Purple_XL/dp/B0C43KQQ1C/ref=sr_1_36?crid=2I78R71UY7PUE&dib=eyJ2IjoiMSJ9.WYvWD2cgjdBPtWlnbqzYv7CzvGcVQ9ZVMN4WaL9otzGNFDzEEB17jqUj5h_Q8WIE7IZnmAUPtshCZi33fAvJLtpEDCIN4WdGH-hvV3hI8dLVQHxupeFOgdHiRNdXOTfTE8-FObYK_FStDjFwUDnOLEBJXTwqill3LVk6yxIcYOq5c6wLLmgpUFnG9dWjgCGnijxHljqe5IDXtBZ4pYg-x8rPhx3SVfVtuZWvJFPteU8RI1WPLfw5kZmqTT_RoJuTu-7reEJ9SvDuErE6iMz1aaQKgEYGkajnBiN6DLiCffo.wvx5GpxKw36cSCC8_DQQ-MBYpqvvCDg9GsnJb2TOS54&dib_tag=se&keywords=purple+t+shirts+for+men&qid=1710750911&sprefix=purple+tshirts+for+men%2Caps%2C245&sr=8-36">
+                              <img src="https://m.media-amazon.com/images/I/61vx2ZXn-uL._SY679_.jpg" alt="Product 1">
+                  </a>
+                              <h3>Product 5</h3>
+                              <p>Price: $100</p>
+                          </div>
+              
+              
+              
+              
+               <div class="card">
+                     <a href="https://www.amazon.in/Bewakoof-Balance-Graphic-T-Shirt-580213_Purple_XL/dp/B0BZZ8GH9R/ref=sr_1_43?crid=2I78R71UY7PUE&dib=eyJ2IjoiMSJ9.WYvWD2cgjdBPtWlnbqzYv7CzvGcVQ9ZVMN4WaL9otzGNFDzEEB17jqUj5h_Q8WIE7IZnmAUPtshCZi33fAvJLtpEDCIN4WdGH-hvV3hI8dLVQHxupeFOgdHiRNdXOTfTE8-FObYK_FStDjFwUDnOLEBJXTwqill3LVk6yxIcYOq5c6wLLmgpUFnG9dWjgCGnijxHljqe5IDXtBZ4pYg-x8rPhx3SVfVtuZWvJFPteU8RI1WPLfw5kZmqTT_RoJuTu-7reEJ9SvDuErE6iMz1aaQKgEYGkajnBiN6DLiCffo.wvx5GpxKw36cSCC8_DQQ-MBYpqvvCDg9GsnJb2TOS54&dib_tag=se&keywords=purple+t+shirts+for+men&qid=1710750911&sprefix=purple+tshirts+for+men%2Caps%2C245&sr=8-43">
+                              <img src="https://m.media-amazon.com/images/I/51oO8pJ1d4L._SY550_.jpg" alt="Product 1">
+                  </a>
+                              <h3>Product 5</h3>
+                              <p>Price: $100</p>
+                          </div>
+              
+              
+              
+              
+               <div class="card">
+                     <a href="https://www.amazon.in/Max-Mens-Slim-T-Shirt-SCBKHSP2301NP_Lilac/dp/B0BLBTH3LM/ref=sr_1_45?crid=2I78R71UY7PUE&dib=eyJ2IjoiMSJ9.WYvWD2cgjdBPtWlnbqzYv7CzvGcVQ9ZVMN4WaL9otzGNFDzEEB17jqUj5h_Q8WIE7IZnmAUPtshCZi33fAvJLtpEDCIN4WdGH-hvV3hI8dLVQHxupeFOgdHiRNdXOTfTE8-FObYK_FStDjFwUDnOLEBJXTwqill3LVk6yxIcYOq5c6wLLmgpUFnG9dWjgCGnijxHljqe5IDXtBZ4pYg-x8rPhx3SVfVtuZWvJFPteU8RI1WPLfw5kZmqTT_RoJuTu-7reEJ9SvDuErE6iMz1aaQKgEYGkajnBiN6DLiCffo.wvx5GpxKw36cSCC8_DQQ-MBYpqvvCDg9GsnJb2TOS54&dib_tag=se&keywords=purple+t+shirts+for+men&qid=1710750911&sprefix=purple+tshirts+for+men%2Caps%2C245&sr=8-45">
+                              <img src="https://m.media-amazon.com/images/I/81W0WHDF6OL._SY550_.jpg" alt="Product 1">
+                  </a>
+                              <h3>Product 5</h3>
+                              <p>Price: $100</p>
+                          </div>
+ 
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end project section -->
+
+      <!--  footer -->
+      <footer>
+         <div class="footer">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-3">
+                     <div class="inror_box">
+                        <h3>INFORMATION </h3>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable</p>
+                     </div>
+                  </div>
+                  <div class="col-md-3">
+                     <div class="inror_box">
+                        <h3>MY ACCOUNT </h3>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable</p>
+                     </div>
+                  </div>
+                  <div class="col-md-3">
+                     <div class="inror_box">
+                        <h3>ABOUT  </h3>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable</p>
+                     </div>
+                  </div>
+                  <div class="col-md-3">
+                     <div class="inror_box">
+                        <h3>CONTACTS  </h3>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <p>© 2024 All Rights Reserved. Design by Amigos</a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- end footer -->
+      <!-- Javascript files-->
+      <script src="./static/js/jquery.min.js"></script>
+      <script src="./static/js/popper.min.js"></script>
+      <script src="./static/js/bootstrap.bundle.min.js"></script>
+      <script src="./static/js/jquery-3.0.0.min.js"></script>
+      <!-- sidebar -->
+      <script src="./static/js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="./static/js/custom.js"></script>
+   </body>
+</html>
+<script>
+   // Calculate the height of three pages
+   const threePagesHeight = window.innerHeight * 3;
+   function navigate() {
+       var fileName = document.getElementById('srch').value.trim();
+   
+       // Check if the input is not empty
+       if (fileName !== '') {
+           // Navigate to the HTML file
+           window.location.href = fileName;
+       } else {
+           // Alert user if the input is empty
+           alert("Please enter a file name");
+       }
+   }
+   // Create the scroll effect
+   // Get the input field
+       var input = document.getElementById("srch");
+
+       // Execute a function when the user presses a key on the keyboard
+       input.addEventListener("keypress", function(event) {
+       // If the user presses the "Enter" key on the keyboard
+       if (event.key === "Enter") {
+           // Cancel the default action, if needed
+           event.preventDefault();
+           // Trigger the button element with a click
+           document.getElementById("forsearch").click();
+       }
+       });
+   function scrollThreePages(direction) {
+       const currentPosition = window.pageYOffset;
+       const targetPosition = direction === 'up' ? currentPosition - threePagesHeight : currentPosition + threePagesHeight;
+
+       const scrollAnimation = window.requestAnimationFrame(() => {
+           window.scrollTo(0, targetPosition);
+           if (window.pageYOffset === targetPosition) {
+               window.cancelAnimationFrame(scrollAnimation);
+           } else {
+               scrollThreePages(direction);
+           }
+       });
+   }
+
+   // Add event listeners for scrolling up and down
+   document.addEventListener('keydown', (event) => {
+       if (event.key === 'ArrowUp') {
+           scrollThreePages('up');
+       } else if (event.key === 'ArrowDown') {
+           scrollThreePages('down');
+       }
+   });
+
+   document.querySelector('.up-arrow').addEventListener('click', () => {
+       scrollThreePages('up');
+   });
+
+   document.querySelector('.down-arrow').addEventListener('click', () => {
+       scrollThreePages('down');
+   });
+
+   function cameraIconClicked() {
+       
+       window.location.href = 'camera.html';
+   }
+
+   
+   document.getElementById('cameraIcon').addEventListener('click', cameraIconClicked);
+</script>
